@@ -1,5 +1,6 @@
 .highProduct {
-  padding: 80px 10%;
+  max-width: 1240px;
+  margin: 80px auto;
   &__top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -188,7 +189,7 @@
         opacity: 1;
       }
       .slick-prev::after {
-        content: "A";
+        content: "";
       }
     }
     .btn {

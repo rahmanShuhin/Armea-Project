@@ -21,10 +21,11 @@ const ProductDetails = () => {
   };
   return (
     <div className="productDetails">
-      <div>
-        <ArrowBackIcon></ArrowBackIcon>
-        <h2>Regresar a la Tienda</h2>
-      </div>
+      <h3 className="blog__title">
+        {" "}
+        <ArrowBackIcon></ArrowBackIcon>Regresar a la Tienda
+      </h3>
+
       <div className="productDetails__top">
         <div>
           <div>

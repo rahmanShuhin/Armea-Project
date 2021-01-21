@@ -41,7 +41,8 @@
     }
   }
   &__container {
-    padding: 0px 10%;
+    max-width: 1240px;
+    margin: 0px auto;
     display: flex;
     > h2 {
       text-align: center;

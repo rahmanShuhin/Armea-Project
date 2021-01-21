@@ -13,6 +13,8 @@ import ProductDetails from "./Components/ProductDetails";
 import AllBlog from "./Components/AllBlog";
 import Footer from "./Components/Footer";
 import BlogDetails from "./Components/BlogDetails";
+import BlogSlide from "./Components/BlogSlide";
+import Contact from "./Components/Contact";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -39,15 +41,21 @@ function App() {
           <Route exact path="/product">
             <Navigation></Navigation>
             <ProductDetails></ProductDetails>
+            <Footer></Footer>
           </Route>
-          <Route exact path="/album">
-            <PhotoAlbum></PhotoAlbum>
+          <Route exact path="/contact">
+            <Navigation></Navigation>
+            <Contact></Contact>
+            <Footer></Footer>
           </Route>
           <Route exact path="/">
             <Navigation></Navigation>
             <Landing></Landing>
             <Messenger></Messenger>
             <HighProducts></HighProducts>
+            <BlogSlide></BlogSlide>
+            <PhotoAlbum></PhotoAlbum>
+            <Footer></Footer>
           </Route>
         </Switch>
       </Router>

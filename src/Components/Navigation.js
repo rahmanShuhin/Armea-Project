@@ -10,37 +10,39 @@ const Navigation = () => {
     document.querySelector(".hamburger-menu").classList.toggle("animate");
   };
   return (
-    <nav className="nav">
-      <Link>
-        <img src={logo} alt="logo" />
-      </Link>
-      <div className="nav__left">
-        <Link>Inicio</Link>
-        <Link>Tienda</Link>
-        <Link>Nosotros</Link>
-        <Link>Contacto</Link>
-      </div>
-      <div className="nav__right">
-        {!search && (
-          <div>
-            <Link>Ingresar</Link>
-            <Link>Registrarse</Link>
-          </div>
-        )}
-        {search && <input type="text" placeholder="Buscar" />}
-        <div>
-          <Link onClick={() => setSearch(!search)}>
-            <SearchIcon></SearchIcon>
-          </Link>
-          <Link>
-            <ShoppingBasketIcon></ShoppingBasketIcon>
-          </Link>
+    <section className="nav__container">
+      <nav className="nav">
+        <Link>
+          <img src={logo} alt="logo" />
+        </Link>
+        <div className="nav__left">
+          <Link>Inicio</Link>
+          <Link>Tienda</Link>
+          <Link>Nosotros</Link>
+          <Link>Contacto</Link>
         </div>
-      </div>
-      <div class="menu-wrapper" onClick={handleBurger}>
-        <div class="hamburger-menu"></div>
-      </div>
-    </nav>
+        <div className="nav__right">
+          {!search && (
+            <div>
+              <Link>Ingresar</Link>
+              <Link>Registrarse</Link>
+            </div>
+          )}
+          {search && <input type="text" placeholder="Buscar" />}
+          <div>
+            <Link onClick={() => setSearch(!search)}>
+              <SearchIcon></SearchIcon>
+            </Link>
+            <Link>
+              <ShoppingBasketIcon></ShoppingBasketIcon>
+            </Link>
+          </div>
+        </div>
+        <div class="menu-wrapper" onClick={handleBurger}>
+          <div class="hamburger-menu"></div>
+        </div>
+      </nav>
+    </section>
   );
 };
 
