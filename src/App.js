@@ -15,6 +15,7 @@ import Footer from "./Components/Footer";
 import BlogDetails from "./Components/BlogDetails";
 import BlogSlide from "./Components/BlogSlide";
 import Contact from "./Components/Contact";
+import NewProduct from "./Components/NewProduct";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -53,6 +54,7 @@ function App() {
             <Landing></Landing>
             <Messenger></Messenger>
             <HighProducts></HighProducts>
+            <NewProduct></NewProduct>
             <BlogSlide></BlogSlide>
             <PhotoAlbum></PhotoAlbum>
             <Footer></Footer>

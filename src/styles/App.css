@@ -12,8 +12,8 @@ html {
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
@@ -1336,6 +1336,7 @@ a {
   -ms-grid-columns: 1fr 295px 1fr;
       grid-template-columns: 1fr 295px 1fr;
   gap: 16px;
+  padding-bottom: 100px;
 }
 
 .photoAlbum > div:nth-of-type(1) > div:nth-of-type(1) {
@@ -2363,15 +2364,18 @@ a {
   height: 400px;
 }
 
-.blogSlide .slick-dots li.slick-active button:before {
-  color: #ff6606;
+.blogSlide .slick-dots {
+  bottom: -30px;
 }
 
-.blogSlide .slick-dots li button:before {
-  color: #616161;
+.blogSlide .slick-dots .slick-active {
+  border-radius: 50%;
+  border: 0.5px solid #ff6606;
+}
+
+.blogSlide .slick-dots .slick-active button::before {
+  color: #ff6606;
   opacity: 1;
-  width: 11px;
-  height: 11px;
 }
 
 .blogSlide .slick-arrow {
@@ -2612,5 +2616,118 @@ a {
   font-size: 30px;
   line-height: 32px;
   margin-bottom: 35px;
+}
+
+.newProduct {
+  padding: 10px 0px 60px 0px;
+}
+
+.newProduct > h2 {
+  text-align: center;
+  font-size: 40px;
+  line-height: 120%;
+}
+
+.newProduct > h2::after {
+  content: "nuevos";
+  color: #ff6606;
+}
+
+.newProduct > div {
+  max-width: 1240px;
+  margin: 40px auto 40px auto;
+}
+
+.newProduct .slick__container {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.newProduct .slick__container > div {
+  width: 404px;
+  height: 486px;
+  z-index: 1;
+  background-color: white;
+}
+
+.newProduct .slick__container > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.newProduct .slick__container > div:nth-of-type(1) h2 {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.newProduct .slick__container > div:nth-of-type(1) p {
+  color: #616161;
+  margin-bottom: 18px;
+}
+
+.newProduct .slick__container > div:nth-of-type(1) > div button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff6606), to(#ff7e2e));
+  background: linear-gradient(180deg, #ff6606 0%, #ff7e2e 100%);
+  border-radius: 10px;
+  padding: 10px 40px;
+  color: white;
+  margin-top: 40px;
+}
+
+.newProduct .slick__container > div:nth-of-type(1) > div button:nth-of-type(2) {
+  margin-left: 10px;
+  background: none;
+  color: #ff6606;
+  border: 1px solid #ff6606;
+}
+
+.newProduct .slick__container > div img {
+  width: 100%;
+  width: 404px;
+  height: 486px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.newProduct .slick-dots {
+  bottom: -60px;
+}
+
+.newProduct .slick-dots .slick-active {
+  border-radius: 50%;
+  border: 0.5px solid #ff6606;
+}
+
+.newProduct .slick-dots .slick-active button::before {
+  color: #ff6606;
+  opacity: 1;
+}
+
+.newProduct .slick-next {
+  background-color: #ff6606;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.newProduct .slick-next:hover, .newProduct .slick-next:active, .newProduct .slick-next:focus {
+  background-color: #ff6606 !important;
+}
+
+.newProduct .slick-next:before {
+  color: white;
+  opacity: 1;
+  z-index: 100;
 }
 /*# sourceMappingURL=App.css.map */

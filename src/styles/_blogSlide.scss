@@ -15,14 +15,16 @@
     height: 400px;
   }
 
-  .slick-dots li.slick-active button:before {
-    color: $primary;
+  .slick-dots {
+    bottom: -30px;
   }
-  .slick-dots li button:before {
-    color: #616161;
-    opacity: 1;
-    width: 11px;
-    height: 11px;
+  .slick-dots .slick-active {
+    border-radius: 50%;
+    border: 0.5px solid $primary;
+    button::before {
+      color: $primary;
+      opacity: 1;
+    }
   }
   .slick-arrow {
     background-color: $primary !important;
