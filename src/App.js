@@ -10,6 +10,9 @@ import HighProducts from "./Components/HighProducts";
 import Shop from "./Components/Shop";
 import PhotoAlbum from "./Components/PhotoAlbum";
 import ProductDetails from "./Components/ProductDetails";
+import AllBlog from "./Components/AllBlog";
+import Footer from "./Components/Footer";
+import BlogDetails from "./Components/BlogDetails";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -21,6 +24,17 @@ function App() {
           <Route exact path="/shop">
             <Navigation></Navigation>
             <Shop></Shop>
+            <Footer></Footer>
+          </Route>
+          <Route exact path="/blog">
+            <Navigation></Navigation>
+            <AllBlog></AllBlog>
+            <Footer></Footer>
+          </Route>
+          <Route exact path="/blogpost">
+            <Navigation></Navigation>
+            <BlogDetails></BlogDetails>
+            <Footer></Footer>
           </Route>
           <Route exact path="/product">
             <Navigation></Navigation>
