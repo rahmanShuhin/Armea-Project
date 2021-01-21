@@ -1,0 +1,128 @@
+.nav {
+  background-color: #ff6606;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 10%;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  @include breakpoints-down(large) {
+    background-color: red;
+    padding: 0px 3%;
+  }
+  &__left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    @include breakpoints-down(medium) {
+      display: none;
+    }
+    > a {
+      color: white;
+      font-size: 18px;
+      margin: 0px 50px;
+      @include breakpoints-down(large) {
+        margin: 0px 30px;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    > input {
+      color: white;
+      background: none;
+      border: none;
+      outline: none;
+      padding-bottom: 5px;
+      width: 200px;
+      font-size: 18px;
+      border-bottom: 1px solid white;
+    }
+    ::placeholder {
+      color: lightgray;
+    }
+    > div:nth-child(1) {
+      > a {
+        font-size: 16px;
+        color: white;
+        margin: 0px 30px;
+      }
+    }
+    > div:nth-child(2) {
+      display: flex;
+      align-items: center;
+
+      > a {
+        font-size: 16px;
+        color: white;
+        margin: 0px 10px;
+      }
+    }
+  }
+}
+.menu-wrapper {
+  width: $bar-width;
+  height: $bar-height + $bar-spacing * 2;
+  cursor: pointer;
+  display: none;
+  @include breakpoints-down(medium) {
+    display: block;
+  }
+}
+
+.hamburger-menu,
+.hamburger-menu:after,
+.hamburger-menu:before {
+  width: $bar-width;
+  height: $bar-height;
+}
+
+.hamburger-menu {
+  position: relative;
+  transform: translateY($bar-spacing);
+  background: rgba(255, 255, 255, 1);
+  transition: all 0ms 300ms;
+
+  &.animate {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+
+.hamburger-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: $bar-spacing;
+  background: rgba(255, 255, 255, 1);
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: $bar-spacing;
+  background: rgba(255, 255, 255, 1);
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
