@@ -4,7 +4,10 @@ import blogPost1 from "../images/blogPost1.png";
 import blogPost from "../images/blogPost.png";
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import AccountCircleRoundedIcon from "@material-ui/icons/AccountCircleRounded";
+import { useHistory } from "react-router-dom";
+
 const BlogSlide = () => {
+  let history = useHistory();
   const settings = {
     dots: true,
     infinite: true,
@@ -17,7 +20,10 @@ const BlogSlide = () => {
       <h2>Nuestro </h2>
       <div className="slick__box">
         <Slider {...settings}>
-          <div className="slick__container">
+          <div
+            className="slick__container"
+            onClick={() => history.push("/blogpost")}
+          >
             <img src={blogPost1} alt="" />
             <div>
               <h3>Muebles para tu felicidad</h3>

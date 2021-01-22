@@ -16,6 +16,9 @@ import BlogDetails from "./Components/BlogDetails";
 import BlogSlide from "./Components/BlogSlide";
 import Contact from "./Components/Contact";
 import NewProduct from "./Components/NewProduct";
+import Modal from "./Components/Modal";
+import About from "./Components/About";
+import ScrollToTop from "./Components/ScrollToTop";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -23,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop></ScrollToTop>
         <Switch>
           <Route exact path="/shop">
             <Navigation></Navigation>
@@ -49,10 +53,16 @@ function App() {
             <Contact></Contact>
             <Footer></Footer>
           </Route>
+          <Route exact path="/about">
+            <Navigation></Navigation>
+            <About></About>
+            <Footer></Footer>
+          </Route>
           <Route exact path="/">
             <Navigation></Navigation>
             <Landing></Landing>
             <Messenger></Messenger>
+            <Modal></Modal>
             <HighProducts></HighProducts>
             <NewProduct></NewProduct>
             <BlogSlide></BlogSlide>

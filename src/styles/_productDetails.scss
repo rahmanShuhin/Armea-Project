@@ -1,7 +1,9 @@
 .productDetails {
   margin: 100px auto;
   max-width: 1240px;
-
+  .blog__title {
+    padding: 10px;
+  }
   &__top {
     display: grid;
     grid-template-columns: 1fr 1fr;

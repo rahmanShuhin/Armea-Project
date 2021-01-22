@@ -135,7 +135,9 @@ const HighProducts = () => {
           </Slider>
         </div>
         <div>
-          <Link className="btn">IR A LA TIENDA</Link>
+          <Link className="btn" to="/shop">
+            IR A LA TIENDA
+          </Link>
         </div>
       </div>
     </div>

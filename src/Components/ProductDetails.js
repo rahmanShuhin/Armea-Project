@@ -7,6 +7,7 @@ import StarRatings from "react-star-ratings";
 import thumbnail_1 from "../images/thumbnail_1.png";
 import thumbnail_2 from "../images/thumbnail_2.png";
 import ProductCard from "./ProductCard";
+import { Link } from "react-router-dom";
 const ProductDetails = () => {
   const [img, setImg] = useState(0);
   const handleForward = () => {
@@ -21,11 +22,12 @@ const ProductDetails = () => {
   };
   return (
     <div className="productDetails">
-      <h3 className="blog__title">
-        {" "}
-        <ArrowBackIcon></ArrowBackIcon>Regresar a la Tienda
-      </h3>
-
+      <div>
+        <Link className="blog__title" to="/shop">
+          {" "}
+          <ArrowBackIcon></ArrowBackIcon>Regresar a la Tienda
+        </Link>
+      </div>
       <div className="productDetails__top">
         <div>
           <div>

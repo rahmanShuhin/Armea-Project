@@ -1,3 +1,133 @@
 .about {
   background-color: #fff5ee;
+  margin-top: 100px;
+  a {
+    font-size: 20px;
+  }
+  > div {
+    max-width: 1240px;
+    margin: auto;
+    padding: 100px 0px;
+    > div:nth-of-type(1) {
+      > a:nth-of-type(2) {
+        color: $primary;
+      }
+      h2 {
+        max-width: 900px;
+        font-size: 50px;
+        margin: 50px 0px;
+      }
+    }
+    > div:nth-of-type(2) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      > div {
+        max-width: 610px;
+        img {
+          margin-bottom: 20px;
+          margin-left: auto;
+        }
+        p {
+          font-size: 18px;
+          line-height: 21.6px;
+        }
+      }
+    }
+    > div:nth-of-type(3) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      > div:nth-of-type(2) {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .usImg_1 {
+    position: relative;
+    top: 30px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .usImg_2 {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .vision {
+    > h3 {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 30px;
+        height: 2px;
+        display: inline-block;
+        background-color: $primary;
+        margin-bottom: 5px;
+        margin-right: 10px;
+      }
+    }
+    > p {
+      max-width: 420px;
+    }
+  }
+  &__vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 60px;
+    gap: 20px;
+    p {
+      color: #616161;
+      font-size: 16px;
+    }
+    > div {
+      display: flex;
+      justify-content: flex-start;
+      > div {
+        flex: 1;
+        margin-left: 20px;
+      }
+    }
+  }
+  .vision__list {
+    h2 {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 30px;
+        height: 2px;
+        display: inline-block;
+        background-color: $primary;
+        margin-bottom: 5px;
+        margin-right: 10px;
+      }
+    }
+    ul {
+      margin-left: 50px;
+      margin-top: 20px;
+      li {
+        list-style: none;
+        &::before {
+          content: "\2022";
+          color: $primary;
+          font-weight: bold;
+          font-size: 35px;
+          display: inline-block;
+          margin-left: -1em;
+          position: relative;
+          top: 5px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .diff {
+      font-weight: 900;
+      font-size: 20px;
+    }
+  }
 }

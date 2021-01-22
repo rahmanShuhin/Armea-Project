@@ -18,16 +18,18 @@ const Navigation = () => {
           <img src={logo} alt="logo" />
         </Link>
         <div className="nav__left">
-          <Link>Inicio</Link>
+          <Link to="/">Inicio</Link>
           <Link to="/shop">Tienda</Link>
-          <Link>Nosotros</Link>
+          <Link to="/about">Nosotros</Link>
           <Link to="/contact">Contacto</Link>
         </div>
         <div className="nav__right">
           {!search && (
             <div>
               <Link>Ingresar</Link>
-              <Link>Registrarse</Link>
+              <Link style={{ color: "#222222", fontWeight: "bold" }}>
+                Registrarse
+              </Link>
             </div>
           )}
           {search && <input type="text" placeholder="Buscar" />}
