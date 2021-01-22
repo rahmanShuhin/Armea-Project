@@ -14,6 +14,7 @@
   justify-content: space-around;
   max-width: 1240px;
   margin: 0px auto;
+  position: relative;
   @include breakpoints-down(large) {
     padding: 0px 3%;
   }
@@ -64,6 +65,61 @@
         font-size: 16px;
         color: white;
         margin: 0px 10px;
+      }
+    }
+  }
+  > .nav__cart {
+    width: 668px;
+    height: 270px;
+    background: #fff5ee !important;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    padding: 25px 18px;
+    > div:not(:last-child) {
+      background-color: white;
+      padding: 36px;
+      display: flex;
+      img {
+        width: 90px;
+        height: 90px;
+        object-fit: fill;
+      }
+      > div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 18px;
+        > div {
+          display: flex;
+          justify-content: space-between;
+          button {
+            color: red;
+            font-size: 18px;
+          }
+          h3 {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 23px;
+          }
+        }
+      }
+    }
+    > div:last-child {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 14px;
+      h2 {
+        font-size: 30px;
+        color: #616161;
+        font-weight: normal;
+      }
+      button {
+        background: linear-gradient(180deg, #ff6606 0%, #ff7e2e 100%);
+        border-radius: 5px;
+        color: white;
+        padding: 13px 18px;
       }
     }
   }

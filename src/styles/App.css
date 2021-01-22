@@ -73,6 +73,7 @@ a {
       justify-content: space-around;
   max-width: 1240px;
   margin: 0px auto;
+  position: relative;
 }
 
 @media (max-width: 87.4375em) {
@@ -166,6 +167,92 @@ a {
   font-size: 16px;
   color: white;
   margin: 0px 10px;
+}
+
+.nav > .nav__cart {
+  width: 668px;
+  height: 270px;
+  background: #fff5ee !important;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  padding: 25px 18px;
+}
+
+.nav > .nav__cart > div:not(:last-child) {
+  background-color: white;
+  padding: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav > .nav__cart > div:not(:last-child) img {
+  width: 90px;
+  height: 90px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.nav > .nav__cart > div:not(:last-child) > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 18px;
+}
+
+.nav > .nav__cart > div:not(:last-child) > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav > .nav__cart > div:not(:last-child) > div > div button {
+  color: red;
+  font-size: 18px;
+}
+
+.nav > .nav__cart > div:not(:last-child) > div > div h3 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.nav > .nav__cart > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 14px;
+}
+
+.nav > .nav__cart > div:last-child h2 {
+  font-size: 30px;
+  color: #616161;
+  font-weight: normal;
+}
+
+.nav > .nav__cart > div:last-child button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff6606), to(#ff7e2e));
+  background: linear-gradient(180deg, #ff6606 0%, #ff7e2e 100%);
+  border-radius: 5px;
+  color: white;
+  padding: 13px 18px;
 }
 
 .menu-wrapper {
