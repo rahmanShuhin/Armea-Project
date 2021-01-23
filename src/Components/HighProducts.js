@@ -96,7 +96,7 @@ const HighProducts = () => {
                   <p>Categoria</p>
                   <p>niños</p>
                 </div>
-                <Link>
+                <Link to="/shop">
                   <ArrowForwardIcon></ArrowForwardIcon>
                 </Link>
               </div>
@@ -107,7 +107,7 @@ const HighProducts = () => {
                   <p>Categoria</p>
                   <p>Decoracian</p>
                 </div>
-                <Link>
+                <Link to="/shop">
                   <ArrowForwardIcon></ArrowForwardIcon>
                 </Link>
               </div>
@@ -118,7 +118,7 @@ const HighProducts = () => {
                   <p>Categoria</p>
                   <p>Mascotas</p>
                 </div>
-                <Link>
+                <Link to="/shop">
                   <ArrowForwardIcon></ArrowForwardIcon>
                 </Link>
               </div>

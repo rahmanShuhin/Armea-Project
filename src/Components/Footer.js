@@ -13,12 +13,11 @@ const Footer = () => {
         </div>
         <div>
           <h3>Informacion</h3>
-          <Link>Zonas de envío</Link>
-          <Link>Zonas de envío</Link>
-          <Link>Política de cookies</Link>
-          <Link>Condiciones de uso y compra </Link>
-          <Link>Cómo hacer un pedido</Link>
-          <Link>Métodos de pago</Link>
+          <Link to="/shippingAres">Zonas de envío</Link>
+          <Link to="/cookies">Política de cookies</Link>
+          <Link to="/terms-of-use">Condiciones de uso y compra</Link>
+          <Link to="/how-to-order">Cómo hacer un pedido</Link>
+          <Link to="/paymentMethod">Métodos de pago</Link>
         </div>
         <div>
           <h3>Cuenta</h3>

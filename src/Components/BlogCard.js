@@ -1,7 +1,9 @@
 import React from "react";
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import AccountCircleRoundedIcon from "@material-ui/icons/AccountCircleRounded";
+import { useHistory } from "react-router-dom";
 const BlogCard = ({ x }) => {
+  let history = useHistory();
   return (
     <div className="blogCard">
       <img src={x.img} alt="" />
@@ -18,7 +20,7 @@ const BlogCard = ({ x }) => {
             <p>{x.author}</p>
           </div>
         </div>
-        <button>LEER MAS</button>
+        <button onClick={() => history.push("/blogpost")}>LEER MAS</button>
       </div>
     </div>
   );

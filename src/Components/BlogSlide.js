@@ -39,7 +39,10 @@ const BlogSlide = () => {
               </div>
             </div>
           </div>
-          <div className="slick__container">
+          <div
+            className="slick__container"
+            onClick={() => history.push("/blogpost")}
+          >
             <img src={blogPost} alt="" />
             <div>
               <h3>Muebles para tu felicidad</h3>
@@ -55,7 +58,10 @@ const BlogSlide = () => {
               </div>
             </div>
           </div>
-          <div className="slick__container">
+          <div
+            className="slick__container"
+            onClick={() => history.push("/blogpost")}
+          >
             <img src={blogPost} alt="" />
             <div>
               <h3>Muebles para tu felicidad</h3>
@@ -71,7 +77,10 @@ const BlogSlide = () => {
               </div>
             </div>
           </div>
-          <div className="slick__container">
+          <div
+            className="slick__container"
+            onClick={() => history.push("/blogpost")}
+          >
             <img src={blogPost1} alt="" />
             <div>
               <h3>Muebles para tu felicidad</h3>
@@ -87,7 +96,10 @@ const BlogSlide = () => {
               </div>
             </div>
           </div>
-          <div className="slick__container">
+          <div
+            className="slick__container"
+            onClick={() => history.push("/blogpost")}
+          >
             <img src={blogPost} alt="" />
             <div>
               <h3>Muebles para tu felicidad</h3>

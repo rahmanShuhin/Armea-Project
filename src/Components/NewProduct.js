@@ -3,7 +3,9 @@ import Slider from "react-slick";
 import { fakeData, fakeImg } from "./fakeData";
 import ProductCard from "./ProductCard";
 import StarRatings from "react-star-ratings";
+import { useHistory } from "react-router-dom";
 const NewProduct = () => {
+  let history = useHistory();
   const settings = {
     dots: true,
     infinite: true,
@@ -35,7 +37,9 @@ const NewProduct = () => {
                   starDimension="20px"
                 />
                 <div>
-                  <button>COMPRAR</button>
+                  <button onClick={() => history.push("/product")}>
+                    COMPRAR
+                  </button>
                   <button>AÑADIR</button>
                 </div>
               </div>
