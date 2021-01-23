@@ -16,7 +16,7 @@ const BlogDetails = () => {
       <p></p>
       <div>
         <h3 className="blog__title">
-          <Link>
+          <Link to="/blog">
             <ArrowBackRoundedIcon></ArrowBackRoundedIcon>{" "}
           </Link>
           Regresar al Blog

@@ -12,6 +12,7 @@
     transition: all 0.5s ease-in-out;
     > div {
       width: 600px;
+      min-width: fit-content;
       height: 148px;
       background: rgba(34, 34, 34, 0.2);
       backdrop-filter: blur(3px);
@@ -19,7 +20,6 @@
       place-items: center;
       > h2 {
         font-size: 100px;
-
         &::before {
           content: "#";
           color: $primary;
@@ -33,11 +33,6 @@
     > h2 {
       font-size: 40px;
       color: #3a3a3a;
-
-      &::after {
-        content: " muebles";
-        color: $primary;
-      }
     }
   }
   &__container {

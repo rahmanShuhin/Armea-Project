@@ -23,7 +23,9 @@ const Shop = () => {
         </div>
       </div>
       <div className="shop__head">
-        <h2>Tienda de</h2>
+        <h2>
+          Tienda de <span style={{ color: "#FF6606" }}>mueble</span>{" "}
+        </h2>
       </div>
       <div className="shop__container">
         <SideBox></SideBox>

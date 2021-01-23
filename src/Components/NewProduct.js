@@ -13,7 +13,9 @@ const NewProduct = () => {
   };
   return (
     <div className="newProduct">
-      <h2>Productos </h2>
+      <h2>
+        Productos <span style={{ color: "#FF6606" }}>nuevos</span>{" "}
+      </h2>
       <div>
         <Slider {...settings}>
           {fakeImg.slice(0, 4).map((x, index) => (

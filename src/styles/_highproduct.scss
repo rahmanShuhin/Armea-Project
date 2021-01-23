@@ -28,10 +28,6 @@
       margin: 40px 0px;
       > h2 {
         font-size: 40px;
-        &::after {
-          content: " calidad";
-          color: $primary;
-        }
       }
     }
     .swiper__box {

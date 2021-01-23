@@ -4,10 +4,6 @@
     text-align: center;
     font-size: 40px;
     line-height: 120%;
-    &::after {
-      content: "nuevos";
-      color: $primary;
-    }
   }
   > div {
     max-width: 1240px;

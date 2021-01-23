@@ -84,7 +84,9 @@ const HighProducts = () => {
       </div>
       <div className="highProduct__slider">
         <div>
-          <h2>Productos de alta</h2>
+          <h2>
+            Productos de alta <span style={{ color: "#FF6606" }}>calidad</span>{" "}
+          </h2>
         </div>
         <div className="swiper__box">
           <Slider {...settings} onChange={() => alert()}>

@@ -25,6 +25,14 @@ body {
   font-family: "HomepageBaukasten", sans-serif;
 }
 
+.mb {
+  margin-bottom: 20px;
+}
+
+.mbb {
+  margin-bottom: 100px;
+}
+
 .blog__title {
   margin: 30px 0px !important;
   display: -webkit-box;
@@ -792,11 +800,6 @@ a {
   font-size: 40px;
 }
 
-.highProduct__slider > div > h2::after {
-  content: " calidad";
-  color: #ff6606;
-}
-
 .highProduct__slider .swiper__box .children__product {
   height: 100%;
   background-image: url("../images/children.png");
@@ -1037,6 +1040,9 @@ a {
 
 .shop__banner > div {
   width: 600px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   height: 148px;
   background: rgba(34, 34, 34, 0.2);
   -webkit-backdrop-filter: blur(3px);
@@ -1063,11 +1069,6 @@ a {
 .shop__head > h2 {
   font-size: 40px;
   color: #3a3a3a;
-}
-
-.shop__head > h2::after {
-  content: " muebles";
-  color: #ff6606;
 }
 
 .shop__container {
@@ -1849,6 +1850,9 @@ a {
   top: 140px;
   left: 92px;
   width: 418px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   height: 148px;
   background: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(12px);
@@ -2720,11 +2724,6 @@ a {
   line-height: 120%;
 }
 
-.newProduct > h2::after {
-  content: "nuevos";
-  color: #ff6606;
-}
-
 .newProduct > div {
   max-width: 1240px;
   margin: 40px auto 40px auto;
@@ -3105,5 +3104,77 @@ a {
 .about .vision__list .diff {
   font-weight: 900;
   font-size: 20px;
+}
+
+.cookies {
+  background-color: #fff5ee;
+  margin-top: 100px;
+}
+
+.cookies > div {
+  max-width: 1240px;
+  margin: auto;
+}
+
+.cookies > div:nth-child(2) {
+  padding-bottom: 300px;
+}
+
+.cookies > div p {
+  color: #222222;
+  font-size: 18px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1089px;
+  margin: 50px auto;
+  overflow-x: auto;
+}
+
+tr {
+  background-color: #ffffff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 2fr;
+      grid-template-columns: 1fr 1fr 2fr;
+  padding: 11px 20px;
+}
+
+tr:not(:first-of-type) {
+  background-color: #f6f6f6;
+}
+
+th,
+td {
+  text-align: left;
+}
+
+.topSection div {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topSection div .MuiSvgIcon-root {
+  margin-left: 5px;
+  color: #ff6606;
+}
+
+.topSection div > a:nth-of-type(2) {
+  color: #ff6606;
+}
+
+.topSection h2 {
+  font-size: 50px;
+  line-height: 120%;
+  padding-bottom: 100px;
 }
 /*# sourceMappingURL=App.css.map */

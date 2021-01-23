@@ -19,6 +19,11 @@ import NewProduct from "./Components/NewProduct";
 import Modal from "./Components/Modal";
 import About from "./Components/About";
 import ScrollToTop from "./Components/ScrollToTop";
+import Cookie from "./Components/Cookie";
+import TermsOfUse from "./Components/TermsOfUse";
+import PaymentMethod from "./Components/PaymentMethod";
+import ShippngAreas from "./Components/ShippngAreas";
+import HowToOrder from "./Components/HowToOrder";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -51,6 +56,31 @@ function App() {
           <Route exact path="/contact">
             <Navigation></Navigation>
             <Contact></Contact>
+            <Footer></Footer>
+          </Route>
+          <Route exact path="/cookies">
+            <Navigation></Navigation>
+            <Cookie></Cookie>
+            <Footer></Footer>
+          </Route>
+          <Route exact path="/terms-of-use">
+            <Navigation></Navigation>
+            <TermsOfUse></TermsOfUse>
+            <Footer></Footer>
+          </Route>
+          <Route exact path="/how-to-order">
+            <Navigation></Navigation>
+            <HowToOrder></HowToOrder>
+            <Footer></Footer>
+          </Route>
+          <Route exact path="/paymentMethod">
+            <Navigation></Navigation>
+            <PaymentMethod></PaymentMethod>
+            <Footer></Footer>
+          </Route>
+          <Route exact path="/shippingAres">
+            <Navigation></Navigation>
+            <ShippngAreas></ShippngAreas>
             <Footer></Footer>
           </Route>
           <Route exact path="/about">
