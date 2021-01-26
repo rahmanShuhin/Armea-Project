@@ -24,7 +24,10 @@ import TermsOfUse from "./Components/TermsOfUse";
 import PaymentMethod from "./Components/PaymentMethod";
 import ShippngAreas from "./Components/ShippngAreas";
 import HowToOrder from "./Components/HowToOrder";
-import Login from "./Components/Login";
+import Login from "./Components/UserPanel/Login";
+import Registration from "./Components/UserPanel/Registration";
+import VerifyReg from "./Components/UserPanel/VerifyReg";
+
 function App() {
   useEffect(() => {
     AOS.init();
@@ -47,6 +50,14 @@ function App() {
           <Route exact path="/login">
             <Navigation></Navigation>
             <Login></Login>
+          </Route>
+          <Route exact path="/registration">
+            <Navigation></Navigation>
+            <Registration></Registration>
+          </Route>
+          <Route exact path="/verify">
+            <Navigation></Navigation>
+            <VerifyReg></VerifyReg>
           </Route>
           <Route exact path="/blogpost">
             <Navigation></Navigation>
