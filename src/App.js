@@ -24,6 +24,7 @@ import TermsOfUse from "./Components/TermsOfUse";
 import PaymentMethod from "./Components/PaymentMethod";
 import ShippngAreas from "./Components/ShippngAreas";
 import HowToOrder from "./Components/HowToOrder";
+import Login from "./Components/Login";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -42,6 +43,10 @@ function App() {
             <Navigation></Navigation>
             <AllBlog></AllBlog>
             <Footer></Footer>
+          </Route>
+          <Route exact path="/login">
+            <Navigation></Navigation>
+            <Login></Login>
           </Route>
           <Route exact path="/blogpost">
             <Navigation></Navigation>

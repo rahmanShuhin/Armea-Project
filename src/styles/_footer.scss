@@ -37,12 +37,13 @@
     align-items: center;
     input {
       padding: 10px 12px;
+      font-size: 18px;
+      outline: none;
     }
     button {
       margin-left: 5px;
       border: none;
-      width: 46px;
-      height: 45px;
+      padding: 10px 12px;
       background: #ff6606;
       .MuiSvgIcon-root {
         color: white;

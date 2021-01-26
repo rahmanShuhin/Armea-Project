@@ -105,7 +105,7 @@ const HighProducts = () => {
               <div>
                 <div>
                   <p>Categoria</p>
-                  <p>Decoracian</p>
+                  <p>Decoracion</p>
                 </div>
                 <Link to="/shop">
                   <ArrowForwardIcon></ArrowForwardIcon>
