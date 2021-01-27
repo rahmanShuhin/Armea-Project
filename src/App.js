@@ -27,6 +27,7 @@ import HowToOrder from "./Components/HowToOrder";
 import Login from "./Components/UserPanel/Login";
 import Registration from "./Components/UserPanel/Registration";
 import VerifyReg from "./Components/UserPanel/VerifyReg";
+import Profile from "./Components/UserPanel/Profile/Profile";
 
 function App() {
   useEffect(() => {
@@ -103,6 +104,10 @@ function App() {
             <Navigation></Navigation>
             <About></About>
             <Footer></Footer>
+          </Route>
+          <Route exact path="/profile">
+            <Navigation></Navigation>
+            <Profile></Profile>
           </Route>
           <Route exact path="/">
             <Navigation></Navigation>

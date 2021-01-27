@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { reg } from "./Form_data";
 
 const Registration = () => {
@@ -22,7 +23,7 @@ const Registration = () => {
           </small>
         </div>
         <div className="btn_box">
-          <button>CONTINUAR</button>
+          <Link to="/verify">CONTINUAR</Link>
         </div>
       </form>
     </div>

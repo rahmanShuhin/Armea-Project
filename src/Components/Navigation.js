@@ -26,8 +26,11 @@ const Navigation = () => {
         <div className="nav__right">
           {!search && (
             <div>
-              <Link>Ingresar</Link>
-              <Link style={{ color: "#222222", fontWeight: "bold" }}>
+              <Link to="/login">Ingresar</Link>
+              <Link
+                to="/registration"
+                style={{ color: "#222222", fontWeight: "bold" }}
+              >
                 Registrarse
               </Link>
             </div>

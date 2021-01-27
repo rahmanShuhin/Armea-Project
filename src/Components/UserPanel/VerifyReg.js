@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
+import CheckIcon from "@material-ui/icons/Check";
 const VerifyReg = () => {
-  const [valid, setValid] = useState(true);
+  const [valid, setValid] = useState(false);
   return (
     <div className="verifyReg">
-      {valid && (
+      {!valid && (
         <div>
           <h2>Ingresa el código que te enviamos por e-mail</h2>
           <p>
@@ -15,7 +15,18 @@ const VerifyReg = () => {
           </p>
           <input type="text" placeholder="Ingrese el codigo" />
           <div className="btn_box">
-            <button onClick={() => setValid(false)}>CONTINUAR</button>
+            <button onClick={() => setValid(true)}>CONTINUAR</button>
+          </div>
+        </div>
+      )}
+      {valid && (
+        <div className="checkBox ">
+          <div className="checkIcon">
+            <CheckIcon></CheckIcon>
+          </div>
+          <h2>¡John! Creaste tu cuenta en Armea</h2>
+          <div className="btn_box">
+            <button onClick={() => setValid(true)}>CONTINUAR</button>
           </div>
         </div>
       )}
