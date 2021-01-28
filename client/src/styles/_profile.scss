@@ -1,15 +1,58 @@
 .profile {
   min-height: 80vh;
   display: grid;
-  place-items: center;
+  justify-content: center;
   margin-top: 130px;
   margin-bottom: 100px;
   > div {
     border: 1px solid rgba(97, 97, 97, 0.14);
     box-shadow: 0px 0px 10px rgba(97, 97, 97, 0.14);
-    min-width: 860px;
+    width: 860px;
+    overflow-x: auto;
     min-height: 528px;
     display: flex;
+  }
+}
+.profile__container {
+  flex: 1;
+  padding: 18px 80px;
+  h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  input {
+    background: #f4f5f7;
+    outline: none;
+    border: none;
+    padding: 10px 14px;
+    color: #616161;
+  }
+  h3 {
+    color: #222222;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+.profile__container__2 {
+  flex: 1;
+  padding: 18px 20px 18px 80px;
+  h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  input {
+    background: #f4f5f7;
+    outline: none;
+    border: none;
+    padding: 10px 14px;
+    color: #616161;
+  }
+  h3 {
+    color: #222222;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: normal;
   }
 }
 .sideBar {
@@ -19,6 +62,7 @@
   min-height: 528px;
   > div {
     padding: 20px;
+    cursor: pointer;
   }
   > div:nth-of-type(1) {
     display: flex;
@@ -42,6 +86,7 @@
     background-color: white;
     p {
       color: $primary !important;
+      opacity: 1 !important;
     }
   }
   .MuiAvatar-root {
@@ -53,13 +98,7 @@
 }
 
 .dashboard {
-  flex: 1;
-  padding: 18px 80px;
-  h2 {
-    font-size: 24px;
-  }
   > div {
-    margin-top: 45px;
     > div:nth-of-type(1) {
       display: flex;
       justify-content: space-between;
@@ -83,21 +122,8 @@
         }
       }
     }
+  }
 
-    h3 {
-      color: #222222;
-      opacity: 0.8;
-      font-size: 20px;
-      font-weight: normal;
-    }
-  }
-  input {
-    background: #f4f5f7;
-    outline: none;
-    border: none;
-    padding: 10px 14px;
-    color: #616161;
-  }
   > div:nth-of-type(3) {
     padding: 20px;
     h3 {
@@ -121,6 +147,118 @@
     ::placeholder {
       text-align: center;
       color: $primary;
+    }
+  }
+}
+.editProfile {
+  > div {
+    &:nth-of-type(1) {
+      > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        > div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        > div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      > div {
+        > div {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+    }
+    > div {
+      padding: 20px;
+    }
+  }
+  button {
+    background: linear-gradient(180deg, #ff6606 0%, #ff7e2e 100%);
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  label {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #222222;
+    opacity: 0.8;
+  }
+}
+.orderHistory {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(97, 97, 97, 0.14);
+  &__top {
+    background: #f4f5f7;
+    padding: 15px 20px;
+    position: relative;
+    .selectBox {
+      position: absolute;
+      bottom: 0px;
+      right: 40px;
+    }
+    select {
+      min-width: fit-content;
+      padding: 5px;
+      border: none;
+      font-size: 14px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  table {
+    display: flex;
+    flex-direction: column;
+
+    tr {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+
+      th {
+        font-size: 14px;
+        color: #222222;
+        opacity: 0.8;
+        ttext-align: center;
+      }
+      td {
+        text-align: center;
+        &:nth-of-type(4) {
+          font-weight: bold;
+          font-size: 14px;
+        }
+      }
+      th,
+      td {
+        flex: 1;
+        padding: 10px;
+        button {
+          background-color: $primary;
+          padding: 3px 7px;
+          border-radius: 5px;
+          color: white;
+        }
+      }
     }
   }
 }

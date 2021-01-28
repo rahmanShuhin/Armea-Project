@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import desk from "../images/desk.png";
 const Modal = () => {
   const handleClose = () => {
-    var modal = document.getElementById("myModal");
+    const modal = document.getElementById("myModal");
     modal.style.display = "none";
   };
   useEffect(() => {
-    var modal = document.getElementById("myModal");
+    const modal = document.getElementById("myModal");
     setTimeout(() => {
       modal.style.display = "block";
     }, 1000);

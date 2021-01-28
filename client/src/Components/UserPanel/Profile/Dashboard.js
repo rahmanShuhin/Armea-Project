@@ -2,7 +2,7 @@ import React from "react";
 
 const Dashboard = () => {
   return (
-    <div className="dashboard">
+    <div className="dashboard profile__container">
       <h2>Mis datos</h2>
       <div>
         <div>

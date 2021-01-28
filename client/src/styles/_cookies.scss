@@ -12,24 +12,24 @@
       font-size: 18px;
     }
   }
-}
-table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 1089px;
-  margin: 50px auto;
-  overflow-x: auto;
-}
-tr {
-  background-color: #ffffff;
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  padding: 11px 20px;
-  &:not(:first-of-type) {
-    background-color: #f6f6f6;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1089px;
+    margin: 50px auto;
+    overflow-x: auto;
   }
-}
-th,
-td {
-  text-align: left;
+  tr {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    padding: 11px 20px;
+    &:not(:first-of-type) {
+      background-color: #f6f6f6;
+    }
+  }
+  th,
+  td {
+    text-align: left;
+  }
 }
