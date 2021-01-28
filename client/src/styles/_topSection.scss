@@ -1,0 +1,21 @@
+.topSection {
+  div {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    .MuiSvgIcon-root {
+      margin-left: 5px;
+      color: $primary;
+    }
+    > a:nth-of-type(2) {
+      color: $primary;
+    }
+  }
+  h2 {
+    font-size: 50px;
+    line-height: 120%;
+    padding-bottom: 100px;
+  }
+}

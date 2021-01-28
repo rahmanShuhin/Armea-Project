@@ -1,0 +1,87 @@
+.blogSlide {
+  max-width: 1240px;
+  margin: auto;
+  > h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    &::after {
+      content: " blog";
+      color: $primary;
+    }
+  }
+
+  .slick-track {
+    height: 400px;
+  }
+
+  .slick-dots {
+    bottom: -30px;
+  }
+  .slick-dots .slick-active {
+    border-radius: 50%;
+    border: 0.5px solid $primary;
+    button::before {
+      color: $primary;
+      opacity: 1;
+    }
+  }
+  .slick-arrow {
+    background-color: $primary !important;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 30px lightgray;
+    z-index: 100;
+    top: 40%;
+    transform: translateY(-40%) !important;
+    &:hover,
+    &:active {
+      background-color: lightgray !important;
+    }
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: white;
+    opacity: 1;
+    z-index: 100;
+  }
+  .slick__container {
+    width: 391px;
+
+    height: 370px;
+    img {
+      width: 100%;
+      height: 251px;
+      object-fit: fill;
+    }
+    > div {
+      padding: 16px;
+      > div {
+        display: flex;
+        > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: #616161;
+          &:nth-of-type(1) {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    &:hover {
+      box-shadow: 0px 0px 10px lightgray;
+      cursor: pointer;
+    }
+    p {
+      font-size: 14px;
+    }
+    h3 {
+      margin: 16px auto;
+    }
+  }
+  .slick-active {
+    padding: 0px 10px;
+  }
+}
