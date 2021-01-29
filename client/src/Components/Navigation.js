@@ -4,7 +4,8 @@ import logo from "../images/logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Badge, Input, TextField } from "@material-ui/core";
-import desk from "../images/desk.png";
+import Nav_Cart from "./Nav_Cart";
+import CheckOut from "./CheckOut";
 const Navigation = () => {
   const [showCart, setShowCart] = useState(false);
   const [search, setSearch] = useState(false);
@@ -51,27 +52,9 @@ const Navigation = () => {
         <div class="menu-wrapper" onClick={handleBurger}>
           <div class="hamburger-menu"></div>
         </div>
-        {showCart && (
-          <div className="nav__cart" data-aos="fade-down">
-            <div>
-              <img src={desk} alt="" />
-              <div>
-                <div>
-                  <h3>Escritorio Montesorri</h3>
-                  <button>Eliminar</button>
-                </div>
-                <p style={{ color: "#FF6606" }}>
-                  $999 <small style={{ color: "gray" }}> X 1</small>{" "}
-                </p>
-              </div>
-            </div>
-            <div>
-              <h2>Total: $999</h2>
-              <button>IR A LA CAJA</button>
-            </div>
-          </div>
-        )}
+        {showCart && <Nav_Cart></Nav_Cart>}
       </nav>
+      {/* <CheckOut></CheckOut> */}
     </section>
   );
 };

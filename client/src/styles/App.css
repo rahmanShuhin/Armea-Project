@@ -2961,6 +2961,80 @@ a {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 15px;
+  margin-bottom: 50px;
+}
+
+.modal-content-order__table1 > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  gap: 2px;
+}
+
+.modal-content-order table {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  border: 1px solid rgba(97, 97, 97, 0.14);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* sombra articulo */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+}
+
+.modal-content-order table tr {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 6px 26px;
+}
+
+.modal-content-order table tr > th:nth-of-type(1) {
+  text-align: left;
+}
+
+.modal-content-order table tr th {
+  font-weight: normal;
+  text-align: right;
+}
+
+.modal-content-order table tr th:last-child {
+  font-weight: 900;
+}
+
+.modal-content-order table tr td:not(:nth-of-type(1)) {
+  text-align: right;
+}
+
+.modal-content-order table tr:nth-of-type(1) {
+  background-color: white;
+}
+
+.modal-content-order table tr:nth-of-type(2) {
+  background: #f4f5f7;
+}
+
+.grid_table > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
+  text-align: right;
+}
+
+.grid_table > div p {
+  padding: 6px 12px;
+}
+
+.grid_table > div h4 {
+  padding: 6px 20px;
 }
 
 .close-icon {
@@ -3804,5 +3878,32 @@ a {
   padding: 3px 7px;
   border-radius: 5px;
   color: white;
+}
+
+.checkout {
+  display: block;
+  position: fixed;
+  z-index: 10000;
+  padding-top: 0px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(248, 248, 248, 0.2);
+  /* blur */
+  -webkit-backdrop-filter: blur(70px);
+          backdrop-filter: blur(70px);
+}
+
+.checkout__Modal {
+  background-color: #fefefe;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+  margin: 100px auto;
+  width: 1030px;
+  min-height: 1121px;
+  position: relative;
+  padding: 30px 50px;
 }
 /*# sourceMappingURL=App.css.map */
