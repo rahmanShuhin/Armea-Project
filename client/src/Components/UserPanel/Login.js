@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
 const Login = () => {
+  let history = useHistory();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert();
+    history.goBack();
+  };
   return (
     <div className="login">
       <div>
         <h2>Para seguir, ingresa tu e-mail y contraseña</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="email">Email</label>
             <input type="text" placeholder="Ingrese su email" />

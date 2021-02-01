@@ -6,9 +6,11 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Badge, Input, TextField } from "@material-ui/core";
 import Nav_Cart from "./Nav_Cart";
 import CheckOut from "./CheckOut";
+import { useSelector, useDispatch } from "react-redux";
 const Navigation = () => {
   const [showCart, setShowCart] = useState(false);
   const [search, setSearch] = useState(false);
+  const products = useSelector((state) => state.products);
   const handleBurger = () => {
     document.querySelector(".hamburger-menu").classList.toggle("animate");
   };
@@ -43,7 +45,7 @@ const Navigation = () => {
               <SearchIcon></SearchIcon>
             </Link>
             <Link onClick={() => setShowCart(!showCart)}>
-              <Badge badgeContent={1} color="primary">
+              <Badge badgeContent={products.length} color="primary">
                 <ShoppingBasketIcon></ShoppingBasketIcon>
               </Badge>
             </Link>
@@ -54,7 +56,6 @@ const Navigation = () => {
         </div>
         {showCart && <Nav_Cart></Nav_Cart>}
       </nav>
-      {/* <CheckOut></CheckOut> */}
     </section>
   );
 };

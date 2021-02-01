@@ -4,7 +4,10 @@ import { fakeData, fakeImg } from "./fakeData";
 import ProductCard from "./ProductCard";
 import StarRatings from "react-star-ratings";
 import { useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "./actions/index";
 const NewProduct = () => {
+  const dispatch = useDispatch();
   let history = useHistory();
   const settings = {
     dots: true,
@@ -13,6 +16,7 @@ const NewProduct = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  const handleAddToCart = () => {};
   return (
     <div className="newProduct">
       <h2>
@@ -20,10 +24,10 @@ const NewProduct = () => {
       </h2>
       <div>
         <Slider {...settings}>
-          {fakeImg.slice(0, 4).map((x, index) => (
+          {fakeData.slice(0, 4).map((x, index) => (
             <div className="slick__container">
               <div>
-                <h2>Escritorio Montessori</h2>
+                <h2>{x.productName}</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Integer a pretium elit
@@ -40,14 +44,16 @@ const NewProduct = () => {
                   <button onClick={() => history.push("/product")}>
                     COMPRAR
                   </button>
-                  <button>AÑADIR</button>
+                  <button onClick={() => dispatch(addToCart(x.id))}>
+                    AÑADIR
+                  </button>
                 </div>
               </div>
               <div>
-                <img src={x} alt="" />
+                <img src={x.img} alt="" />
               </div>
               <div>
-                <img src={fakeImg[index + 1]} alt="" />
+                <img src={fakeData[index + 1].img} alt="" />
               </div>
             </div>
           ))}

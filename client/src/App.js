@@ -28,7 +28,8 @@ import Login from "./Components/UserPanel/Login";
 import Registration from "./Components/UserPanel/Registration";
 import VerifyReg from "./Components/UserPanel/VerifyReg";
 import Profile from "./Components/UserPanel/Profile/Profile";
-
+import CheckOut from "./Components/CheckOut";
+import { PrivateRoute } from "./Components/PrivateRoute";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -60,36 +61,49 @@ function App() {
             <Navigation></Navigation>
             <VerifyReg></VerifyReg>
           </Route>
+          {/* private route */}
+          <PrivateRoute exact path="/checkout">
+            <Navigation></Navigation>
+            <HighProducts></HighProducts>
+            <CheckOut></CheckOut>
+          </PrivateRoute>
+
           <Route exact path="/blogpost">
             <Navigation></Navigation>
             <BlogDetails></BlogDetails>
             <Footer></Footer>
           </Route>
+
           <Route exact path="/product">
             <Navigation></Navigation>
             <ProductDetails></ProductDetails>
             <Footer></Footer>
           </Route>
+
           <Route exact path="/contact">
             <Navigation></Navigation>
             <Contact></Contact>
             <Footer></Footer>
           </Route>
+
           <Route exact path="/cookies">
             <Navigation></Navigation>
             <Cookie></Cookie>
             <Footer></Footer>
           </Route>
+
           <Route exact path="/terms-of-use">
             <Navigation></Navigation>
             <TermsOfUse></TermsOfUse>
             <Footer></Footer>
           </Route>
+
           <Route exact path="/how-to-order">
             <Navigation></Navigation>
             <HowToOrder></HowToOrder>
             <Footer></Footer>
           </Route>
+
           <Route exact path="/paymentMethod">
             <Navigation></Navigation>
             <PaymentMethod></PaymentMethod>
