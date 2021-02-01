@@ -23,6 +23,29 @@ const Landing = () => {
   return (
     <div className="container">
       <div className="landing">
+        <div className="blurred-box">
+          <div>
+            <h2>Muebles que hacen</h2>
+            <h2>click</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus deserunt cumque temporibus fugit
+            </p>
+            <Button>Comprar ahora</Button>
+          </div>
+        </div>
+        <div className="blurred-box-2">
+          <div>
+            <h3>Escritorio Montessori</h3>
+            <p>Para tus ninos</p>
+            <div>
+              <h3>$ 1990</h3>
+              <Link>
+                <ArrowForwardIcon></ArrowForwardIcon>
+              </Link>
+            </div>
+          </div>
+        </div>
         <div className="landing__slider">
           <Swiper
             spaceBetween={100}
@@ -35,99 +58,21 @@ const Landing = () => {
             <SwiperSlide className="slide">
               <div className="inner">
                 <div></div>
-                <div>
-                  <div className="blurred-box">
-                    <div>
-                      <h2>Muebles que hacen</h2>
-                      <h2>click</h2>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellendus deserunt cumque temporibus fugit
-                      </p>
-                      <Button>Comprar ahora</Button>
-                    </div>
-                  </div>
-                  <div className="blurred-container">
-                    <div className="blurred-box-2">
-                      <div>
-                        <h3>Escritorio Montessori</h3>
-                        <p>Para tus ninos</p>
-                        <div>
-                          <h3>$ 1990</h3>
-                          <Link>
-                            <ArrowForwardIcon></ArrowForwardIcon>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div></div>
                 <div></div>
               </div>
             </SwiperSlide>
             <SwiperSlide className="slide">
               <div className="inner2">
                 <div></div>
-                <div>
-                  <div className="blurred-box">
-                    <div>
-                      <h2>Muebles que hacen</h2>
-                      <h2>click</h2>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellendus deserunt cumque temporibus fugit
-                      </p>
-                      <Button>Comprar ahora</Button>
-                    </div>
-                  </div>
-                  <div className="blurred-container">
-                    <div className="blurred-box-2">
-                      <div>
-                        <h3>Escritorio Montessori</h3>
-                        <p>Para tus ninos</p>
-                        <div>
-                          <h3>$ 1990</h3>
-                          <Link>
-                            <ArrowForwardIcon></ArrowForwardIcon>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div></div>
                 <div></div>
               </div>
             </SwiperSlide>
             <SwiperSlide className="slide">
               <div className="inner">
                 <div></div>
-                <div>
-                  <div className="blurred-box">
-                    <div>
-                      <h2>Muebles que hacen</h2>
-                      <h2>click</h2>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellendus deserunt cumque temporibus fugit
-                      </p>
-                      <Button>Comprar ahora</Button>
-                    </div>
-                  </div>
-                  <div className="blurred-container">
-                    <div className="blurred-box-2">
-                      <div>
-                        <h3>Escritorio Montessori</h3>
-                        <p>Para tus ninos</p>
-                        <div>
-                          <h3>$ 1990</h3>
-                          <Link>
-                            <ArrowForwardIcon></ArrowForwardIcon>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div></div>
               </div>
             </SwiperSlide>
           </Swiper>

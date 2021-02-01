@@ -342,10 +342,12 @@ a {
 
 .landing {
   height: 583px;
+  z-index: 90;
 }
 
 .landing__slider {
   padding-top: 30px;
+  z-index: 1000;
 }
 
 .landing .slide {
@@ -428,7 +430,7 @@ a {
   width: 48px;
   height: 48px;
   top: 500px !important;
-  left: 76%;
+  left: 75%;
   border-radius: 50%;
   background-color: #ff6606;
 }
@@ -466,8 +468,9 @@ a {
 }
 
 .blurred-box {
-  position: relative;
-  left: -30%;
+  position: absolute;
+  top: 0px;
+  left: 15%;
   width: 473px;
   height: 440px;
   background: rgba(255, 255, 255, 0.8);
@@ -532,16 +535,12 @@ a {
   background-color: #ffe4d3;
 }
 
-.blurred-container {
-  position: absolute;
-  right: 60px;
-  bottom: 100px;
-}
-
 .blurred-box-2 {
   width: 294px;
   height: 148px;
-  position: relative;
+  position: absolute;
+  top: 330px;
+  right: 10%;
   border-radius: 2px;
   z-index: 100 !important;
   background: rgba(255, 255, 255, 0.8);
@@ -2722,33 +2721,7 @@ a {
   padding: 10px 0px 60px 0px;
 }
 
-.newProduct > h2 {
-  text-align: center;
-  font-size: 40px;
-  line-height: 120%;
-}
-
-.newProduct > div {
-  max-width: 1240px;
-  margin: 40px auto 40px auto;
-}
-
-.newProduct .slick__container {
-  display: -ms-grid !important;
-  display: grid !important;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
-}
-
-.newProduct .slick__container > div {
-  width: 404px;
-  height: 486px;
-  z-index: 1;
-  background-color: white;
-}
-
-.newProduct .slick__container > div:nth-of-type(1) {
+.newProduct__left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2761,17 +2734,18 @@ a {
           justify-content: flex-end;
 }
 
-.newProduct .slick__container > div:nth-of-type(1) h2 {
+.newProduct__left h2 {
   font-size: 40px;
   margin-bottom: 8px;
 }
 
-.newProduct .slick__container > div:nth-of-type(1) p {
+.newProduct__left p {
   color: #616161;
   margin-bottom: 18px;
+  max-width: 300px;
 }
 
-.newProduct .slick__container > div:nth-of-type(1) > div button {
+.newProduct__left > div button {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff6606), to(#ff7e2e));
   background: linear-gradient(180deg, #ff6606 0%, #ff7e2e 100%);
   border-radius: 10px;
@@ -2780,19 +2754,76 @@ a {
   margin-top: 40px;
 }
 
-.newProduct .slick__container > div:nth-of-type(1) > div button:nth-of-type(2) {
+.newProduct__left > div button:nth-of-type(2) {
   margin-left: 10px;
   background: none;
   color: #ff6606;
   border: 1px solid #ff6606;
 }
 
-.newProduct .slick__container > div img {
-  width: 100%;
-  width: 404px;
+.newProduct > h2 {
+  text-align: center;
+  font-size: 40px;
+  line-height: 120%;
+}
+
+.newProduct > div {
+  max-width: 1240px;
+  margin: 40px auto 40px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.newProduct .slick__container {
+  padding: 0px 10px;
+}
+
+.newProduct .slick__container > div {
+  display: -ms-grid;
+  display: grid;
+}
+
+.newProduct .slick__container .slick__inner {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  z-index: 1;
+  background-color: white;
+}
+
+.newProduct .slick__container .slick__inner > div {
+  width: 404px !important;
+  height: 486px;
+}
+
+.newProduct .slick__container img {
+  width: 404px !important;
   height: 486px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.newProduct .slick-arrow {
+  background-color: #ff6606;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  -webkit-box-shadow: 5px 5px 30px lightgray;
+          box-shadow: 5px 5px 30px lightgray;
+  z-index: 100;
+  top: 45%;
+  -webkit-transform: translateY(45%) !important;
+          transform: translateY(45%) !important;
+}
+
+.newProduct .slick-arrow:hover, .newProduct .slick-arrow:active {
+  background-color: lightgray !important;
 }
 
 .newProduct .slick-dots {
@@ -2807,6 +2838,10 @@ a {
 .newProduct .slick-dots .slick-active button::before {
   color: #ff6606;
   opacity: 1;
+}
+
+.newProduct .slick-prev {
+  display: none !important;
 }
 
 .newProduct .slick-next {
@@ -3312,7 +3347,7 @@ a {
 .login > div {
   padding: 37px;
   width: 400px;
-  height: 490px;
+  min-height: 490px;
   border: 1px solid rgba(97, 97, 97, 0.14);
   -webkit-box-shadow: 0px 0px 10px rgba(97, 97, 97, 0.14);
           box-shadow: 0px 0px 10px rgba(97, 97, 97, 0.14);

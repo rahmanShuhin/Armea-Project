@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import {
+  CardElement,
+  useStripe,
+  useElements,
+  CardNumberElement,
+  CardExpiryElement,
+  CardCvcElement,
+  PaymentRequestButtonElement,
+} from "@stripe/react-stripe-js";
 const MyCheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
@@ -22,9 +30,25 @@ const MyCheckoutForm = () => {
     <form id="payment-form">
       <div className="card-element">
         <label htmlFor="cardNumber">CardNumber</label>
-        <label htmlFor="cvc">CVC</label>
       </div>
-      <CardElement></CardElement>
+      <CardNumberElement
+        options={{
+          style: {
+            base: {
+              fontSize: "16px",
+              color: "#424770",
+              "::placeholder": {
+                color: "#aab7c4",
+              },
+            },
+            invalid: {
+              color: "red",
+            },
+          },
+        }}
+      ></CardNumberElement>
+      <CardExpiryElement onChange={() => alert()}></CardExpiryElement>
+      <CardCvcElement></CardCvcElement>
     </form>
   );
 };

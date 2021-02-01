@@ -6,6 +6,7 @@ import StarRatings from "react-star-ratings";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "./actions/index";
+
 const NewProduct = () => {
   const dispatch = useDispatch();
   let history = useHistory();
@@ -15,6 +16,8 @@ const NewProduct = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    afterChange: () => console.log("slides change"),
+    // beforeChange: (current, next) => alert(next),
   };
   const handleAddToCart = () => {};
   return (
@@ -23,41 +26,39 @@ const NewProduct = () => {
         Productos <span style={{ color: "#FF6606" }}>nuevos</span>{" "}
       </h2>
       <div>
-        <Slider {...settings}>
-          {fakeData.slice(0, 4).map((x, index) => (
-            <div className="slick__container">
-              <div>
-                <h2>{x.productName}</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer a pretium elit
-                </p>
-                <StarRatings
-                  rating={5}
-                  starRatedColor="#ff6606"
-                  numberOfStars={5}
-                  name="rating"
-                  starSpacing="5px"
-                  starDimension="20px"
-                />
+        <div className="newProduct__left">
+          <h2>Escritorio Montessori</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a
+            pretium elit
+          </p>
+          <StarRatings
+            rating={5}
+            starRatedColor="#ff6606"
+            numberOfStars={5}
+            name="rating"
+            starSpacing="5px"
+            starDimension="20px"
+          />
+          <div>
+            <button onClick={() => history.push("/product")}>COMPRAR</button>
+            <button onClick={() => dispatch(addToCart("1"))}>AÑADIR</button>
+          </div>
+        </div>
+        <div className="slick__container">
+          <Slider {...settings}>
+            {fakeData.slice(0, 4).map((x, index) => (
+              <div className="slick__inner">
                 <div>
-                  <button onClick={() => history.push("/product")}>
-                    COMPRAR
-                  </button>
-                  <button onClick={() => dispatch(addToCart(x.id))}>
-                    AÑADIR
-                  </button>
+                  <img src={x.img} alt="" />
+                </div>
+                <div>
+                  <img src={fakeData[index + 1].img} alt="" />
                 </div>
               </div>
-              <div>
-                <img src={x.img} alt="" />
-              </div>
-              <div>
-                <img src={fakeData[index + 1].img} alt="" />
-              </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );

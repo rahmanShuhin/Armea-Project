@@ -1,5 +1,5 @@
 const initialState = {
-  user: null,
+  user: true,
 };
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
