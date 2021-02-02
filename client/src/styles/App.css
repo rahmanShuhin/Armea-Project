@@ -3592,7 +3592,7 @@ a {
           justify-content: center;
 }
 
-.registration > form .btn_box a {
+.registration > form .btn_box button {
   padding: 10px 40px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff6606), to(#ff7e2e));
   background: linear-gradient(180deg, #ff6606 0%, #ff7e2e 100%);
