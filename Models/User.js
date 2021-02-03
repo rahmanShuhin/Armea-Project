@@ -27,13 +27,13 @@ const userSchema = new mongoose.Schema({
   },
   country: {
     type: String,
-    required: true,
+    required: false,
     min: 6,
     max: 255,
   },
   region: {
     type: String,
-    required: true,
+    required: false,
     min: 6,
     max: 255,
   },
@@ -49,9 +49,9 @@ const userSchema = new mongoose.Schema({
     min: 6,
     max: 255,
   },
-  verfied: {
+  verified: {
     type: Boolean,
-    required: true,
+    default: false,
   },
   verification_code: {
     type: String,

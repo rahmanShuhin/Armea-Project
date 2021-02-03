@@ -180,7 +180,7 @@ const ProductDetails = () => {
             </div>
             <div className="productDetails__card">
               <div>
-                <h2>Benficios</h2>
+                <h2>Beneficios</h2>
                 <p>
                   Ideal para tener en casa y que los pequeños puedan realizar
                   sus actividades escolares de homeschooling.

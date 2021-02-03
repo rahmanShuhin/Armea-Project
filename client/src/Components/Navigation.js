@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import { Badge, Input, TextField } from "@material-ui/core";
+import { Avatar, Badge, Input, TextField } from "@material-ui/core";
 import Nav_Cart from "./Nav_Cart";
 import CheckOut from "./CheckOut";
+import chat from "../images/chat.png";
 import { useSelector, useDispatch } from "react-redux";
 const Navigation = () => {
   const [showCart, setShowCart] = useState(false);
   const [search, setSearch] = useState(false);
   const products = useSelector((state) => state.products);
+  const user = useSelector((state) => state.user);
   const handleBurger = () => {
     document.querySelector(".hamburger-menu").classList.toggle("animate");
   };
@@ -28,7 +30,7 @@ const Navigation = () => {
           <Link to="/blog">Blog</Link>
         </div>
         <div className="nav__right">
-          {!search && (
+          {!search && !user.user && (
             <div>
               <Link to="/login">Ingresar</Link>
               <Link
@@ -37,6 +39,13 @@ const Navigation = () => {
               >
                 Registrarse
               </Link>
+            </div>
+          )}
+          {!search && user.user && (
+            <div className="profile__img">
+              <Avatar></Avatar>
+              <p>{user.name}</p>
+              <img src={chat} alt="" />
             </div>
           )}
           {search && <input type="text" placeholder="Buscar" />}

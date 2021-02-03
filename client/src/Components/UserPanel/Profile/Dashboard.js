@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useSelector, useDispatch } from "react-redux";
 const Dashboard = () => {
+  const user = useSelector((state) => state.user);
   return (
     <div className="dashboard profile__container">
       <h2>Mis datos</h2>
@@ -12,11 +13,11 @@ const Dashboard = () => {
         <div>
           <div>
             <label htmlFor="Usuario">Usuario</label>
-            <input type="text" value="John Doe" />
+            <input type="text" value={user?.name} />
           </div>
           <div>
             <label htmlFor="Usuario">Email</label>
-            <input type="text" value="Johndoe@correo.com" />
+            <input type="text" value={user?.email} />
           </div>
           <div>
             <label htmlFor="Usuario">Contraseña</label>

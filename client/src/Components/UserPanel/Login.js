@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useSelector, useDispatch } from "react-redux";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 
+import * as yup from "yup";
+import jwt_decode from "jwt-decode";
+import { signIn } from "../actions";
 const schema = yup.object().shape({
-  email: yup.string().required().email(),
-  password: yup.string().required().min(6),
+  email: yup
+    .string()
+    .required("el correo electrónico es un campo obligatorio")
+    .email("el correo electrónico debe ser un correo electrónico válido"),
+  password: yup
+    .string()
+    .required("La contraseña es un campo requerido")
+    .min(6, "La contraseña debe tener al menos 6 caracteres"),
 });
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const [dis, setDis] = useState(false);
+  const [err, setErr] = useState(null);
   const { register, handleSubmit, watch, errors } = useForm({
     resolver: yupResolver(schema),
     mode: "onBlur",
@@ -18,8 +30,34 @@ const Login = () => {
   });
   let history = useHistory();
   const onSubmit = (data) => {
-    console.log(data);
-    alert();
+    setErr(null);
+    fetch("http://localhost:5000/login", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        if (json.error) {
+          setErr(json);
+        } else {
+          var decoded = jwt_decode(json.token);
+          console.log(decoded);
+          dispatch(
+            signIn(
+              decoded._id,
+              decoded.email,
+              decoded.name,
+              decoded.token,
+              decoded.verified
+            )
+          );
+          history.push("/profile");
+        }
+      });
   };
 
   return (
@@ -50,7 +88,14 @@ const Login = () => {
             />
           </div>
           <div>
-            <button type="submit">INGRESAR</button>
+            <small style={{ color: "red", margin: "auto" }}>
+              {err && err.error}
+            </small>
+          </div>
+          <div>
+            <button disabled={dis} type="submit">
+              INGRESAR
+            </button>
             <Link to="/registration">CREAR CUENTA</Link>
           </div>
         </form>

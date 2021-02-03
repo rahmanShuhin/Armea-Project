@@ -22,3 +22,19 @@ export const addQuantity = (id) => {
     id,
   };
 };
+
+export const signIn = (id, email, name, token, verified) => {
+  return {
+    type: "SIGN_IN",
+    id,
+    email,
+    name,
+    token,
+    verified,
+  };
+};
+export const signOut = () => {
+  return {
+    type: "SIGN_OUT",
+  };
+};

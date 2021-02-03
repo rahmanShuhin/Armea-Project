@@ -7,6 +7,7 @@ const { registrationValidation, loginValidation } = require("./validation");
 
 //registration user
 router.post("/registration", async (req, res) => {
+  console.log(req.body);
   //authentication
   const { error } = registrationValidation({
     name: req.body.name,
@@ -15,12 +16,16 @@ router.post("/registration", async (req, res) => {
   });
   if (error) {
     console.log(error);
-    return res.status(400).send(error.details[0].message);
+    return res.status(400).send({
+      error: error.details[0].message,
+    });
   }
   const existUser = await User.findOne({ email: req.body.email });
   console.log(existUser);
   if (existUser) {
-    res.status(200).send("Email is Already Taken");
+    res.status(200).send({
+      error: "El correo electronico ya ha sido tomado",
+    });
   } else {
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(req.body.password, salt);
@@ -31,11 +36,11 @@ router.post("/registration", async (req, res) => {
       name: req.body.name,
       email: req.body.email,
       password: hashPassword,
-      surname: req.body.surname,
-      phone: req.body.phone,
-      country: req.body.country,
-      region: req.body.region,
-      shipping_Address: req.body.shipping_Address,
+      surname: "",
+      phone: "",
+      country: "",
+      region: "",
+      shipping_Address: "",
       verfied: false,
       verification_code: var_code,
     });
@@ -62,7 +67,18 @@ router.post("/registration", async (req, res) => {
       });
       console.log("Message sent: %s", info.messageId);
       console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-      res.send({ user: user._id, code: random.toString() });
+      const token = jwt.sign(
+        {
+          _id: saveduser._id,
+          email: saveduser.email,
+          name: saveduser.name,
+          verified: saveduser.verified,
+        },
+        process.env.TOKEN_SECRET
+      );
+      res.header("auth-token", token).send({
+        token: token,
+      });
     } catch (err) {
       console.log(err);
       res.status(400).send(err);
@@ -78,15 +94,50 @@ router.post("/login", async (req, res) => {
     return res.status(400).send(error.details[0].message);
   }
   const existUser = await User.findOne({ email: req.body.email });
-  if (!existUser) return res.status(400).send("Email is not found");
+  if (!existUser)
+    return res.status(400).send({
+      error: "No se encuentra el correo electrónico",
+    });
   const validPass = await bcrypt.compare(req.body.password, existUser.password);
-  if (!validPass) return res.status(400).send("Invalid Password");
+  if (!validPass)
+    return res.status(400).send({
+      error: "Contraseña invalida",
+    });
   //create and assign a token
   const token = jwt.sign(
-    { _id: existUser._id, name: existUser.name },
+    {
+      _id: existUser._id,
+      email: existUser.email,
+      name: existUser.name,
+      verified: existUser.verified,
+    },
     process.env.TOKEN_SECRET
   );
-  res.header("auth-token", token).send(token);
+  res.header("auth-token", token).send({
+    token: token,
+  });
+});
+
+router.patch("/verified", async (req, res) => {
+  console.log(req.body);
+  const user = await User.findOne({ email: req.body.email });
+  const validPass = await bcrypt.compare(
+    req.body.password,
+    user.verification_code
+  );
+  if (!validPass) {
+    return res.status(400).send({
+      error: "Codigo invalido",
+    });
+  } else {
+    const user = await User.updateOne(
+      { email: req.body.email },
+      { verified: true }
+    );
+    return res.status(400).send({
+      verification: true,
+    });
+  }
 });
 
 module.exports = router;

@@ -1,10 +1,17 @@
 const initialState = {
-  user: true,
+  user: false,
 };
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case "SIGN_IN":
-      return { user: true };
+      return {
+        user: true,
+        email: action.email,
+        name: action.name,
+        id: action.id,
+        token: action.token,
+        verified: action.verified,
+      };
     case "SIGN_OUT":
       return { user: false };
     default:

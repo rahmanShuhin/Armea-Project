@@ -119,11 +119,11 @@ function App() {
             <About></About>
             <Footer></Footer>
           </Route>
-          <Route exact path="/profile">
+          <PrivateRoute exact path="/profile">
             <Navigation></Navigation>
             <Profile></Profile>
             <Footer></Footer>
-          </Route>
+          </PrivateRoute>
           <Route exact path="/">
             <Navigation></Navigation>
             <Landing></Landing>

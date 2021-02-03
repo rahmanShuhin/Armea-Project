@@ -37,6 +37,7 @@
   &__right {
     display: flex;
     align-items: center;
+
     > input {
       color: white;
       background: none;
@@ -51,10 +52,33 @@
       color: lightgray;
     }
     > div:nth-child(1) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      gap: 20px;
       > a {
         font-size: 16px;
         color: white;
-        margin: 0px 30px;
+      }
+      > P {
+        color: white;
+      }
+    }
+    .profile__img {
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 30px;
+        width: 15px;
+        height: 15px;
+        background: #00ff38;
+        border-radius: 50%;
+        z-index: 2;
       }
     }
     > div:nth-child(2) {
@@ -62,6 +86,8 @@
       align-items: center;
 
       > a {
+        display: grid;
+        place-items: center;
         font-size: 16px;
         color: white;
         margin: 0px 10px;

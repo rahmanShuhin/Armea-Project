@@ -3,10 +3,11 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
+const cors = require("cors");
 dotenv.config();
 //Middleware
 app.use(bodyParser.json());
-
+app.use(cors());
 //import all router
 const auth = require("./Routes/Auth");
 
