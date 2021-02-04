@@ -12,7 +12,7 @@ const VerifyReg = ({ email }) => {
   let history = useHistory();
   const dispatch = useDispatch();
   const handleVerification = () => {
-    fetch("http://localhost:5000/verified", {
+    fetch("https://stormy-depths-57114.herokuapp.com/verified", {
       method: "PATCH",
       body: JSON.stringify({
         email: user.email,

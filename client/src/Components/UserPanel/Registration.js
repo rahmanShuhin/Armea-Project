@@ -8,6 +8,7 @@ import VerifyReg from "./VerifyReg";
 import { useSelector, useDispatch } from "react-redux";
 import { signIn } from "../actions";
 import jwt_decode from "jwt-decode";
+import emailjs from "emailjs-com";
 const schema = yup.object().shape({
   name: yup.string().required("Faltaba tu nombre."),
   last_name: yup.string().required("Faltaba tu apellido."),
@@ -41,7 +42,7 @@ const Registration = () => {
   const onSubmit = (data) => {
     setDis(true);
 
-    fetch("http://localhost:5000/registration", {
+    fetch("https://stormy-depths-57114.herokuapp.com/registration", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -53,11 +54,9 @@ const Registration = () => {
         if (json.error) {
           setErr(json);
         } else {
-          console.log(json);
           setEmail(data.email);
           setVeri(true);
           var decoded = jwt_decode(json.token);
-          console.log(decoded);
           dispatch(
             signIn(
               decoded._id,

@@ -31,7 +31,7 @@ const Login = () => {
   let history = useHistory();
   const onSubmit = (data) => {
     setErr(null);
-    fetch("http://localhost:5000/login", {
+    fetch("https://stormy-depths-57114.herokuapp.com/login", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -55,6 +55,7 @@ const Login = () => {
               decoded.verified
             )
           );
+          sessionStorage.setItem("user-token", json.token);
           history.push("/profile");
         }
       });

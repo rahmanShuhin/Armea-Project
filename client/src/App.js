@@ -30,9 +30,29 @@ import VerifyReg from "./Components/UserPanel/VerifyReg";
 import Profile from "./Components/UserPanel/Profile/Profile";
 import CheckOut from "./Components/CheckOut";
 import { PrivateRoute } from "./Components/PrivateRoute";
+import jwt_decode from "jwt-decode";
+import { signIn } from "./Components/actions";
+import { useSelector, useDispatch } from "react-redux";
 function App() {
+  const dispatch = useDispatch();
   useEffect(() => {
     AOS.init();
+  }, []);
+  useEffect(() => {
+    if (sessionStorage.getItem("user-token")) {
+      const token = sessionStorage.getItem("user-token");
+      alert(token);
+      var decoded = jwt_decode(token);
+      dispatch(
+        signIn(
+          decoded._id,
+          decoded.email,
+          decoded.name,
+          decoded.token,
+          decoded.verified
+        )
+      );
+    }
   }, []);
   return (
     <div className="App">

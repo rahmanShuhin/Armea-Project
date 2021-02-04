@@ -43,8 +43,12 @@ const Navigation = () => {
           )}
           {!search && user.user && (
             <div className="profile__img">
-              <Avatar></Avatar>
-              <p>{user.name}</p>
+              <Link to="/profile">
+                <Avatar></Avatar>
+              </Link>
+              <Link to="/profile">
+                <p>{user.name}</p>
+              </Link>
               <img src={chat} alt="" />
             </div>
           )}

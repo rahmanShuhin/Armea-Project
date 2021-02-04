@@ -33,6 +33,7 @@ export const signIn = (id, email, name, token, verified) => {
     verified,
   };
 };
+
 export const signOut = () => {
   return {
     type: "SIGN_OUT",
