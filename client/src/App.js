@@ -41,7 +41,6 @@ function App() {
   useEffect(() => {
     if (sessionStorage.getItem("user-token")) {
       const token = sessionStorage.getItem("user-token");
-      alert(token);
       var decoded = jwt_decode(token);
       dispatch(
         signIn(
