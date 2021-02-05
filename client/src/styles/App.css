@@ -59,6 +59,11 @@ a {
   cursor: pointer;
 }
 
+.btn__disable {
+  opacity: 0.7;
+  cursor: progress;
+}
+
 .nav__container {
   background-color: #ff6606;
   width: 100%;
@@ -3820,6 +3825,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 22px;
 }
 

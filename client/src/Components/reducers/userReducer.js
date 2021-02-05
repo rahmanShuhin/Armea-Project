@@ -8,6 +8,8 @@ const userReducer = (state = initialState, action) => {
         user: true,
         email: action.email,
         name: action.name,
+        country: action.country,
+        region: action.region,
         id: action.id,
         token: action.token,
         verified: action.verified,

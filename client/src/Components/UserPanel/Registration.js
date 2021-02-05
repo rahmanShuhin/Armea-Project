@@ -41,7 +41,6 @@ const Registration = () => {
 
   const onSubmit = (data) => {
     setDis(true);
-
     fetch("https://stormy-depths-57114.herokuapp.com/registration", {
       method: "POST",
       body: JSON.stringify(data),
@@ -53,6 +52,7 @@ const Registration = () => {
       .then((json) => {
         if (json.error) {
           setErr(json);
+          setDis(false);
         } else {
           setEmail(data.email);
           setVeri(true);
@@ -62,7 +62,9 @@ const Registration = () => {
               decoded._id,
               decoded.email,
               decoded.name,
-              decoded.token,
+              decoded.country,
+              decoded.region,
+              json.token,
               decoded.verified
             )
           );
@@ -114,7 +116,11 @@ const Registration = () => {
 
             <div className="btn_box">
               {/* <Link to="/verify">CONTINUAR</Link> */}
-              <button disabled={dis} type="submit">
+              <button
+                disabled={dis}
+                className={dis && "btn__disable"}
+                type="submit"
+              >
                 CONTINUAR
               </button>
             </div>

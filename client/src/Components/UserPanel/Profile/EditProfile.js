@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useSelector, useDispatch } from "react-redux";
 const EditProfile = () => {
+  const user = useSelector((state) => state.user);
   return (
     <div className="profile__container editProfile">
       <h2>Editar datos</h2>
@@ -9,11 +10,11 @@ const EditProfile = () => {
         <div>
           <div>
             <label htmlFor="Usuario">Usuario actual</label>
-            <input type="text" defaultValue="John Doe" />
+            <input type="text" defaultValue={user?.name} />
           </div>
           <div>
             <label htmlFor="Usuario">Nuevo usuario</label>
-            <input type="text" defaultValue="John Doe 2" />
+            <input type="text" defaultValue={user?.name} />
           </div>
         </div>
         <button>MODIFICAR</button>
@@ -45,7 +46,7 @@ const EditProfile = () => {
         <div>
           <label htmlFor="">Nuevo correo</label>
           <div>
-            <input type="text" placeholder="johndoe@correo.com" />
+            <input type="text" placeholder={user?.email} />
             <button>MODIFICAR</button>
           </div>
         </div>

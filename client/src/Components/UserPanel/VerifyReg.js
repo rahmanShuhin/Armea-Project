@@ -12,6 +12,7 @@ const VerifyReg = ({ email }) => {
   let history = useHistory();
   const dispatch = useDispatch();
   const handleVerification = () => {
+    setDis(true);
     fetch("https://stormy-depths-57114.herokuapp.com/verified", {
       method: "PATCH",
       body: JSON.stringify({
@@ -25,10 +26,11 @@ const VerifyReg = ({ email }) => {
       .then((response) => response.json())
       .then((json) => {
         if (json.error) {
+          setDis(false);
           console.log(json);
           setErr(json.error);
         } else {
-          dispatch(signIn(user.id, user.email, user.name, user.token, true));
+          // dispatch(signIn(user.id, user.email, user.name, user.token, true));
           setValid(true);
         }
       });
@@ -56,7 +58,11 @@ const VerifyReg = ({ email }) => {
             )}
           </div>
           <div className="btn_box">
-            <button disabled={dis} onClick={handleVerification}>
+            <button
+              disabled={dis}
+              className={dis && "btn__disable"}
+              onClick={handleVerification}
+            >
               CONTINUAR
             </button>
           </div>
@@ -69,7 +75,7 @@ const VerifyReg = ({ email }) => {
           </div>
           <h2>¡{user?.name}! Creaste tu cuenta en Armea</h2>
           <div className="btn_box">
-            <button onClick={() => history.push("/profile")}>CONTINUAR</button>
+            <button onClick={() => history.push("/login")}>CONTINUAR</button>
           </div>
         </div>
       )}

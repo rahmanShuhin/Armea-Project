@@ -30,6 +30,7 @@ const Login = () => {
   });
   let history = useHistory();
   const onSubmit = (data) => {
+    setDis(true);
     setErr(null);
     fetch("https://stormy-depths-57114.herokuapp.com/login", {
       method: "POST",
@@ -51,7 +52,9 @@ const Login = () => {
               decoded._id,
               decoded.email,
               decoded.name,
-              decoded.token,
+              decoded.country,
+              decoded.region,
+              json.token,
               decoded.verified
             )
           );
@@ -94,7 +97,11 @@ const Login = () => {
             </small>
           </div>
           <div>
-            <button disabled={dis} type="submit">
+            <button
+              disabled={dis}
+              className={dis && "btn__disable"}
+              type="submit"
+            >
               INGRESAR
             </button>
             <Link to="/registration">CREAR CUENTA</Link>

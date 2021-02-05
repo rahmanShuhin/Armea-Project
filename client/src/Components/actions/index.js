@@ -23,12 +23,14 @@ export const addQuantity = (id) => {
   };
 };
 
-export const signIn = (id, email, name, token, verified) => {
+export const signIn = (id, email, name, country, region, token, verified) => {
   return {
     type: "SIGN_IN",
     id,
     email,
     name,
+    country,
+    region,
     token,
     verified,
   };

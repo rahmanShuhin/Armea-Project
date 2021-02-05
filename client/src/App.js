@@ -47,7 +47,9 @@ function App() {
           decoded._id,
           decoded.email,
           decoded.name,
-          decoded.token,
+          decoded.country,
+          decoded.region,
+          token,
           decoded.verified
         )
       );

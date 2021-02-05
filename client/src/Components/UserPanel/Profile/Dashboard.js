@@ -33,23 +33,23 @@ const Dashboard = () => {
         <div>
           <div>
             <label htmlFor="Usuario">Nombre</label>
-            <input type="text" value="John Doe" />
+            <input type="text" value={user?.name} />
           </div>
           <div>
             <label htmlFor="Usuario">Apellido</label>
-            <input type="text" value="Johndoe@correo.com" />
+            <input type="text" value={user?.email} />
           </div>
           <div>
             <label htmlFor="Usuario">Telefono</label>
             <input type="text" value="Ingrese su numero" />
           </div>
           <div>
-            <label htmlFor="Usuario">Pais</label>
-            <input type="text" value="Ingrese su numero" />
+            <label htmlFor="Usuario">País</label>
+            <input type="text" value={user?.country} />
           </div>
           <div>
             <label htmlFor="Usuario">Region</label>
-            <input type="text" value="Ingrese su numero" />
+            <input type="text" value={user?.region} />
           </div>
         </div>
       </div>
