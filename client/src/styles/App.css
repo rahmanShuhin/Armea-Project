@@ -3808,7 +3808,7 @@ a {
   min-height: 528px;
 }
 
-.sideBar > div {
+.sideBar > div:not(:first-child) {
   padding: 20px;
   cursor: pointer;
 }
@@ -3828,7 +3828,14 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 22px;
+  padding: 22px 5px;
+  cursor: pointer;
+}
+
+.sideBar > div:nth-of-type(1) > div:nth-child(2) {
+  word-wrap: break-word;
+  padding: 10px;
+  width: 100%;
 }
 
 .sideBar > div:not(:first-of-type) p {

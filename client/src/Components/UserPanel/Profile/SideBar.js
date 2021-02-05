@@ -22,8 +22,10 @@ const SideBar = ({ setShow, show }) => {
     <div className="sideBar">
       <div onClick={() => handleState(1)} className={show === 1 && "active"}>
         <Avatar src="https://manofmany.com/wp-content/uploads/2019/06/50-Long-Haircuts-Hairstyle-Tips-for-Men-2.jpg"></Avatar>
-        <p>{user?.name}</p>
-        <small>{user?.email}</small>
+        <div>
+          <p>{user?.name}</p>
+          <small>{user?.email}</small>
+        </div>
       </div>
       <div className={show === 2 && "active"} onClick={() => handleState(2)}>
         <p>
