@@ -28,6 +28,7 @@ import Login from "./Components/UserPanel/Login";
 import Registration from "./Components/UserPanel/Registration";
 import VerifyReg from "./Components/UserPanel/VerifyReg";
 import Profile from "./Components/UserPanel/Profile/Profile";
+import Admin from "./Components/Admin/Admin";
 import CheckOut from "./Components/CheckOut";
 import { PrivateRoute } from "./Components/PrivateRoute";
 import jwt_decode from "jwt-decode";
@@ -139,6 +140,9 @@ function App() {
             <Navigation></Navigation>
             <About></About>
             <Footer></Footer>
+          </Route>
+          <Route exact path="/admin">
+            <Admin></Admin>
           </Route>
           <PrivateRoute exact path="/profile">
             <Navigation></Navigation>

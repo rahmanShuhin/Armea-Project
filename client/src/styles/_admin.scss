@@ -1,0 +1,39 @@
+.admin {
+  background-color: red;
+  display: flex;
+  > div:nth-of-type(1) {
+    background: #363740;
+    width: 255px;
+    color: #a4a6b3;
+    min-height: 100vh;
+  }
+  > div:nth-of-type(2) {
+    background: #f7f8fc;
+    flex: 1;
+  }
+}
+.adminSide {
+  > div:nth-of-type(1) {
+    text-align: center;
+    padding: 30px;
+  }
+  .button {
+    margin-top: 30px;
+    > div {
+      padding: 18px 32px;
+      cursor: pointer;
+      > img {
+        margin-right: 24px;
+      }
+    }
+    .active {
+      background: #9fa2b442;
+
+      border-left: 3px solid #dde2ff;
+    }
+  }
+}
+
+.adminDash {
+  padding: 36px 30px;
+}
