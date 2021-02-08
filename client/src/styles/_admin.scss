@@ -1,6 +1,9 @@
 .admin {
   background-color: red;
   display: flex;
+  .MuiSvgIcon-root {
+    cursor: pointer;
+  }
   > div:nth-of-type(1) {
     background: #363740;
     width: 255px;
@@ -36,4 +39,154 @@
 
 .adminDash {
   padding: 36px 30px;
+  > div {
+    max-width: 1060px;
+    margin: 50px auto;
+    height: fit-content;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+  &__top {
+    display: grid;
+    padding: 15px 0px;
+    grid-template-columns: 254px 254px 254px 254px;
+    grid-template-rows: 127px;
+    gap: 14px;
+    > div {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid rgba(63, 63, 68, 0.005);
+      box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05),
+        0px 1px 3px rgba(63, 63, 68, 0.15);
+      border-radius: 4px;
+      .small__arrow {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+      }
+      &:nth-of-type(1) {
+        .MuiSvgIcon-root {
+          color: #47b881;
+          font-size: 30px;
+        }
+      }
+      &:nth-of-type(2) {
+        .MuiSvgIcon-root {
+          color: #bf0e08;
+          font-size: 30px;
+        }
+      }
+      &:nth-of-type(3) {
+        .MuiSvgIcon-root {
+          color: #1665d8;
+          font-size: 30px;
+        }
+      }
+      &:nth-of-type(4) {
+        .MuiSvgIcon-root {
+          color: #f7d154;
+          font-size: 30px;
+        }
+      }
+      &:last-of-type {
+        background: #1665d8;
+        color: white;
+      }
+    }
+  }
+  &__store {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px 0px;
+    > div {
+      padding: 10px;
+      background: #ffffff;
+      border: 1px solid rgba(63, 63, 68, 0.005);
+      box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05),
+        0px 1px 3px rgba(63, 63, 68, 0.15);
+      border-radius: 4px;
+      width: 521px;
+      height: 182px;
+      > div:nth-of-type(1) {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        place-items: center;
+        small {
+          margin-top: 30px;
+          font-weight: bold;
+          color: #66788a;
+        }
+        .MuiSvgIcon-root {
+          color: #da2244;
+          font-size: 50px;
+        }
+      }
+      > div:nth-of-type(2) {
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        > div {
+          display: grid;
+          place-items: center;
+          margin: 0px 20px;
+          h4 {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            .MuiSvgIcon-root {
+              color: #c93636;
+              margin-left: 5px;
+              &:nth-of-type(2) {
+                color: red !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__bottom {
+    display: grid;
+    padding: 10px 0px;
+    grid-template-columns: 254px 254px 254px 254px;
+    grid-template-rows: 127px;
+    gap: 14px;
+    > div {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid rgba(63, 63, 68, 0.005);
+      box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05),
+        0px 1px 3px rgba(63, 63, 68, 0.15);
+      border-radius: 4px;
+      .small__arrow {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+      }
+      &:nth-of-type(1) {
+        .MuiSvgIcon-root {
+          color: #47b881;
+          font-size: 30px;
+        }
+      }
+      &:nth-of-type(2) {
+        .MuiSvgIcon-root {
+          color: #bf0e08;
+          font-size: 30px;
+        }
+      }
+      h3 {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
 }
