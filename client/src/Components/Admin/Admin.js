@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import Adjustment from "./Adjustment";
 import AdminDash from "./AdminDash";
 import AdminSidebar from "./AdminSidebar";
+import Ticket from "./Ticket";
 
 const Admin = () => {
   const [step, setStep] = useState(1);
   return (
     <div className="admin">
       <AdminSidebar step={step} setStep={setStep}></AdminSidebar>
-      <AdminDash></AdminDash>
+      {step === 1 && <AdminDash></AdminDash>}
+      {step === 2 && <Ticket></Ticket>}
+      {step === 4 && <Adjustment></Adjustment>}
     </div>
   );
 };

@@ -6,10 +6,14 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import QueryBuilderIcon from "@material-ui/icons/QueryBuilder";
+import AdminProfile from "./AdminProfile";
 const AdminDash = () => {
   return (
     <div className="adminDash">
-      <h2>Tablero</h2>
+      <div className="adminTop">
+        <h2>Tablero</h2>
+        <AdminProfile></AdminProfile>
+      </div>
       <div>
         <div className="adminDash__title">
           <h3>Performance</h3>

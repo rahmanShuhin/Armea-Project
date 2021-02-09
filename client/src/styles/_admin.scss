@@ -1,8 +1,12 @@
 .admin {
-  background-color: red;
   display: flex;
   .MuiSvgIcon-root {
     cursor: pointer;
+  }
+  .adminTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   > div:nth-of-type(1) {
     background: #363740;
@@ -39,7 +43,7 @@
 
 .adminDash {
   padding: 36px 30px;
-  > div {
+  > div:not(:first-child) {
     max-width: 1060px;
     margin: 50px auto;
     height: fit-content;
@@ -186,6 +190,200 @@
       h3 {
         display: flex;
         align-items: center;
+      }
+    }
+  }
+}
+
+//admin profile
+.adminProfile {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &:nth-child(1) {
+      border-right: 1px solid #c5c7cd;
+      flex: 0.5;
+    }
+    &:nth-child(2) {
+      margin-left: 40px;
+    }
+    .MuiSvgIcon-root {
+      color: #c5c7cd;
+    }
+  }
+}
+
+//adjustment
+.adminAdjustment {
+  padding: 36px 30px;
+  > div:nth-child(2) {
+    margin: 70px 40px;
+  }
+  .adminAdjustment__bottom {
+    h2 {
+      margin-bottom: 23px;
+    }
+    > div {
+      button {
+        background-color: rgb(235, 200, 7);
+        padding: 5px 15px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+          0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        color: white;
+        text-transform: uppercase;
+      }
+      > div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+    }
+    p {
+      color: #66788a;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .adjust__title {
+      margin-bottom: 20px;
+    }
+    .adjust__btn_2 {
+      margin-left: 10px;
+    }
+    .adjust__title_2 {
+      margin: 20px 0px;
+    }
+    .adjust__btn_3 {
+      background-color: #47b881;
+      padding: 10px 42px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.adminTicket {
+  padding: 36px 30px;
+  .adminTicket__body {
+    margin: 70px 40px;
+    p {
+      color: #3a3b3f;
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      > div:nth-child(2) {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 30px;
+
+        > div {
+          display: flex;
+          align-items: center;
+          .MuiSvgIcon-root {
+            font-size: 40px;
+            color: #da2244;
+            margin-right: 10px;
+          }
+        }
+        > button {
+          background: #47b881;
+          color: white;
+          padding: 10px 7px;
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+.newTicket {
+  padding: 36px 30px;
+  .newTicket__top {
+    display: flex;
+    align-items: center;
+    h3 {
+      margin-left: 10px;
+    }
+    button {
+      background: #3751ff;
+      display: flex;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: white;
+      border-radius: 50%;
+      align-items: center;
+      .MuiSvgIcon-root {
+        font-size: 30px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .newTicket__bottom {
+    padding: 15px 70px;
+    small {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    form {
+      margin-top: 20px;
+      input {
+        padding: 9px 18px;
+        min-width: 422px;
+        border: 1px solid rgba(63, 63, 68, 0.005);
+        box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05),
+          0px 1px 3px rgba(63, 63, 68, 0.15);
+        border-radius: 4px;
+        margin-bottom: 25px;
+        font-size: 24px;
+        outline: none;
+      }
+      ::placeholder {
+        color: #c4c4c4;
+      }
+      > div:nth-of-type(1) {
+        margin-bottom: 10px;
+      }
+      > div:nth-of-type(2) {
+        max-width: 700px;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        button {
+          padding: 10px 37px;
+          text-transform: uppercase;
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          border-radius: 4px;
+        }
+        > button:nth-of-type(1) {
+          margin-right: 12px;
+          background: #fafafa;
+          color: #66788a;
+        }
+        > button:nth-of-type(2) {
+          background: #47b881;
+          color: white;
+        }
+      }
+      textarea {
+        border: 1px solid rgba(63, 63, 68, 0.005);
+        box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05),
+          0px 1px 3px rgba(63, 63, 68, 0.15);
+        border-radius: 4px;
+        outline: none;
+        padding: 9px 18px;
       }
     }
   }
