@@ -3,6 +3,7 @@ import Adjustment from "./Adjustment";
 import AdminDash from "./AdminDash";
 import AdminPost from "./AdminPost";
 import AdminSidebar from "./AdminSidebar";
+import AdminStore from "./Store/AdminStore";
 import Ticket from "./Ticket";
 
 const Admin = () => {
@@ -12,6 +13,7 @@ const Admin = () => {
       <AdminSidebar step={step} setStep={setStep}></AdminSidebar>
       {step === 1 && <AdminDash></AdminDash>}
       {step === 2 && <Ticket></Ticket>}
+      {step == 3 && <AdminStore></AdminStore>}
       {step === 4 && <Adjustment></Adjustment>}
       {step === 5 && <AdminPost></AdminPost>}
     </div>

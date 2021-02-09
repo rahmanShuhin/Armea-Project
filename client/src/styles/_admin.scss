@@ -428,3 +428,111 @@
     }
   }
 }
+
+.adminStore {
+  padding: 36px 30px;
+  .adminTop {
+    > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+
+      h2 {
+        margin-right: 50px;
+        padding-bottom: 8px;
+      }
+      button {
+        margin: 0px 20px;
+        text-transform: uppercase;
+        color: #66788a;
+        font-size: 12px;
+        padding-bottom: 8px;
+      }
+      .active {
+        border-bottom: 3px solid #1665d8;
+        color: #1665d8;
+      }
+    }
+  }
+}
+
+.adminProducts {
+  &__body {
+    margin: 70px 40px;
+    p {
+      color: #3a3b3f;
+      font-weight: bold;
+    }
+    > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      > div:nth-child(2) {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 30px;
+
+        > div:nth-of-type(1) {
+          display: flex;
+          align-items: center;
+          .MuiSvgIcon-root {
+            font-size: 40px;
+            color: #da2244;
+            margin-right: 10px;
+          }
+        }
+        > button {
+          background: #47b881;
+          color: white;
+          padding: 10px 7px;
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+  .productSort {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    small {
+      margin-top: 10px;
+      margin-right: 30px;
+    }
+  }
+}
+.adminRequest {
+  margin: 70px 40px;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    > div:nth-of-type(1) {
+      > div {
+        color: #9ea0a5;
+        background: #ffffff;
+        border: 1px solid rgba(63, 63, 68, 0.005);
+        box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05),
+          0px 1px 3px rgba(63, 63, 68, 0.15);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        padding: 4px 5px;
+
+        > input {
+          outline: none;
+          border: none;
+          width: 378px;
+        }
+      }
+    }
+    .productSort {
+      display: flex;
+      align-items: center;
+    }
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
