@@ -4988,4 +4988,66 @@ a {
   outline: none;
   padding: 9px 18px;
 }
+
+.adminPost {
+  padding: 36px 30px;
+}
+
+.adminPost .adminPost__body {
+  margin: 70px 40px;
+}
+
+.adminPost .adminPost__body p {
+  color: #3a3b3f;
+  font-weight: bold;
+}
+
+.adminPost .adminPost__body > div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adminPost .adminPost__body > div:nth-child(1) > div:nth-child(2) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 30px;
+}
+
+.adminPost .adminPost__body > div:nth-child(1) > div:nth-child(2) > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adminPost .adminPost__body > div:nth-child(1) > div:nth-child(2) > div .MuiSvgIcon-root {
+  font-size: 40px;
+  color: #da2244;
+  margin-right: 10px;
+}
+
+.adminPost .adminPost__body > div:nth-child(1) > div:nth-child(2) > button {
+  background: #47b881;
+  color: white;
+  padding: 10px 7px;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
 /*# sourceMappingURL=App.css.map */

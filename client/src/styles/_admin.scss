@@ -388,3 +388,43 @@
     }
   }
 }
+
+.adminPost {
+  padding: 36px 30px;
+  .adminPost__body {
+    margin: 70px 40px;
+    p {
+      color: #3a3b3f;
+      font-weight: bold;
+    }
+    > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      > div:nth-child(2) {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 30px;
+
+        > div {
+          display: flex;
+          align-items: center;
+          .MuiSvgIcon-root {
+            font-size: 40px;
+            color: #da2244;
+            margin-right: 10px;
+          }
+        }
+        > button {
+          background: #47b881;
+          color: white;
+          padding: 10px 7px;
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
