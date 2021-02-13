@@ -46,7 +46,7 @@ const Products = () => {
               <button>
                 <AddCircleIcon></AddCircleIcon>
               </button>
-              <p>Nueva Producto</p>
+              <p>Nuevo producto</p>
             </div>
             <div className="productSort">
               <small>ordenar por:</small>

@@ -21,8 +21,8 @@ import Switch from "@material-ui/core/Switch";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(mail_type, mail_contents, recipients) {
+  return { mail_type, mail_contents, recipients };
 }
 
 const rows = [
@@ -64,14 +64,19 @@ function stableSort(array, comparator) {
 
 const headCells = [
   {
-    id: "name",
+    id: "mail_type",
     numeric: false,
     disablePadding: true,
     label: "Tipo de correo",
   },
-  { id: "Autor", numeric: true, disablePadding: false, label: "Contenido" },
   {
-    id: "Etiquetas",
+    id: "mail_contents",
+    numeric: true,
+    disablePadding: false,
+    label: "Contenido",
+  },
+  {
+    id: "recipients",
     numeric: true,
     disablePadding: false,
     label: "Destinarios",
@@ -323,11 +328,10 @@ export default function EnhancedTable() {
                         scope="row"
                         padding="none"
                       >
-                        {row.name}
+                        {row.mail_type}
                       </TableCell>
-                      <TableCell align="left">{row.calories}</TableCell>
-                      <TableCell align="left">{row.fat}</TableCell>
-                      <TableCell align="left">{row.carbs}</TableCell>
+                      <TableCell align="left">{row.mail_contents}</TableCell>
+                      <TableCell align="left">{row.recipients}</TableCell>
                       <TableCell align="left">
                         <button style={{ color: "#3751FF" }}>Configurar</button>
                       </TableCell>

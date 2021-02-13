@@ -39,7 +39,6 @@ const Ticket = () => {
                   </button>
                   <p>Nueva entrada</p>
                 </div>
-                <button>SELECCIONAR TODO</button>
               </div>
             </div>
           </div>

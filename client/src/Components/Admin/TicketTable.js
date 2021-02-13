@@ -21,8 +21,8 @@ import Switch from "@material-ui/core/Switch";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(name, autor, etiquetas, carbs) {
+  return { name, autor, etiquetas, carbs };
 }
 
 const rows = [
@@ -79,8 +79,13 @@ const headCells = [
     disablePadding: true,
     label: "Titulo",
   },
-  { id: "Autor", numeric: true, disablePadding: false, label: "Autor" },
-  { id: "Etiquetas", numeric: true, disablePadding: false, label: "Etiquetas" },
+  { id: "autor", numeric: false, disablePadding: false, label: "Autor" },
+  {
+    id: "etiquetas",
+    numeric: false,
+    disablePadding: false,
+    label: "Etiquetas",
+  },
   { id: "carbs", numeric: true, disablePadding: false, label: "Fecha" },
 ];
 
@@ -331,10 +336,9 @@ export default function EnhancedTable() {
                       >
                         {row.name}
                       </TableCell>
-                      <TableCell align="left">{row.calories}</TableCell>
-                      <TableCell align="left">{row.fat}</TableCell>
+                      <TableCell align="left">{row.autor}</TableCell>
+                      <TableCell align="left">{row.etiquetas}</TableCell>
                       <TableCell align="left">{row.carbs}</TableCell>
-                      <TableCell align="left">{row.protein}</TableCell>
                     </TableRow>
                   );
                 })}

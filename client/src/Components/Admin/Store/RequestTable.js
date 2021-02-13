@@ -21,8 +21,8 @@ import Switch from "@material-ui/core/Switch";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(name, category, description, price) {
+  return { name, category, description, price };
 }
 
 const rows = [
@@ -64,14 +64,14 @@ const headCells = [
     disablePadding: true,
     label: "Nombre",
   },
-  { id: "Autor", numeric: true, disablePadding: false, label: "Categoria" },
+  { id: "category", numeric: true, disablePadding: false, label: "Categoria" },
   {
-    id: "Etiquetas",
+    id: "description",
     numeric: true,
     disablePadding: false,
     label: "Descripción",
   },
-  { id: "carbs", numeric: true, disablePadding: false, label: "Precio" },
+  { id: "price", numeric: true, disablePadding: false, label: "Precio" },
 ];
 
 function EnhancedTableHead(props) {
@@ -321,10 +321,9 @@ export default function EnhancedTable() {
                       >
                         {row.name}
                       </TableCell>
-                      <TableCell align="left">{row.calories}</TableCell>
-                      <TableCell align="left">{row.fat}</TableCell>
-                      <TableCell align="left">{row.carbs}</TableCell>
-                      <TableCell align="left">{row.protein}</TableCell>
+                      <TableCell align="left">{row.category}</TableCell>
+                      <TableCell align="left">{row.description}</TableCell>
+                      <TableCell align="left">{row.price}</TableCell>
                     </TableRow>
                   );
                 })}
