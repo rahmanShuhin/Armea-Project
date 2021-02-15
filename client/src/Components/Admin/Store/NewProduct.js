@@ -84,7 +84,7 @@ const NewProduct = ({ setShowNew }) => {
                   </div>
                 </div>
                 <div>
-                  <p>inicio</p>
+                  <p>final</p>
                   <DatePicker
                     selected={endDate}
                     onChange={(date) => setEndDate(date)}

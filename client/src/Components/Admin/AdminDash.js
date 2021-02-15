@@ -7,6 +7,11 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import QueryBuilderIcon from "@material-ui/icons/QueryBuilder";
 import AdminProfile from "./AdminProfile";
+import AdminChart from "./AdminChart";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+const percentage = 66;
+
 const AdminDash = () => {
   return (
     <div className="adminDash">
@@ -60,6 +65,55 @@ const AdminDash = () => {
             </div>
             <ExpandLessIcon></ExpandLessIcon>
           </div>
+        </div>
+      </div>
+      <div className="chartContainer">
+        <div className="adminChart">
+          <div className="adminDash__title">
+            <small>Ventas de la tienda</small>
+            <h2 style={{ margin: "0px 10px" }}>19283$</h2>
+            <small className="small__arrow__2">
+              <ArrowDropDownIcon></ArrowDropDownIcon> 12%
+            </small>
+            <small>Esta semana</small>
+            <small style={{ marginLeft: "auto" }} className="small__arrow__3">
+              Ultimos 7 dias <ArrowDropDownIcon></ArrowDropDownIcon>
+            </small>
+          </div>
+          <div>
+            <div>
+              <AdminChart></AdminChart>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p style={{ padding: "20px" }}>Visitas</p>
+          <hr />
+          <div style={{ textAlign: "center", padding: "20px" }}>
+            <CircularProgressbar
+              value={percentage}
+              text={`182`}
+              styles={buildStyles({
+                textColor: "black",
+                textAlign: "center",
+                textSize: "30px",
+                pathColor: "#1070CA",
+                trailColor: "#F7D154",
+              })}
+            />
+          </div>
+          <div style={{ padding: "20px", display: "flex" }}>
+            <div style={{ marginRight: "10px" }}>
+              <small>No regisbtrados</small>
+              <h3 style={{ color: "#1070CA" }}>63%</h3>
+            </div>
+            <div>
+              <small>Registrados</small>
+              <h3 style={{ color: "#F7D154" }}>15%</h3>
+            </div>
+          </div>
+          <hr />
+          <p style={{ padding: "20px" }}>Ultimos 7 dias</p>
         </div>
       </div>
       <div>
