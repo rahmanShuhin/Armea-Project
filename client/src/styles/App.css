@@ -5278,4 +5278,190 @@ a {
   font-size: 30px;
   margin-left: 10px;
 }
+
+.adminNewProduct__bottom {
+  padding: 40px 60px;
+}
+
+.adminNewProduct__bottom form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.adminNewProduct__bottom form input,
+.adminNewProduct__bottom form select,
+.adminNewProduct__bottom form textarea {
+  background: #ffffff;
+  border: 1px solid rgba(63, 63, 68, 0.005);
+  -webkit-box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+          box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+  border-radius: 4px;
+  font-size: 24px;
+  outline: none;
+  padding: 9px 18px;
+}
+
+.adminNewProduct__bottom form label {
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.adminNewProduct__bottom form textarea {
+  font-size: 14px;
+}
+
+.adminNewProduct__bottom form ::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+
+.adminNewProduct__bottom form :-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.adminNewProduct__bottom form ::-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.adminNewProduct__bottom form ::placeholder {
+  color: #c4c4c4;
+}
+
+.adminNewProduct__bottom form > div:nth-child(1) {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+}
+
+.adminNewProduct__bottom form > div:nth-child(1) > div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.adminNewProduct__bottom form > div:nth-child(1) .special_div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 20px 0px;
+}
+
+.adminNewProduct__bottom form > div:nth-child(1) .special_div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.adminNewProduct__bottom form > div:nth-child(1) .select_fu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.adminNewProduct__bottom form > div:nth-child(2) {
+  padding: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 40px;
+}
+
+.adminNewProduct__bottom form > div:nth-child(2) input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.adminNewProduct__bottom form button {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 42px;
+  margin: 20px auto;
+  text-transform: uppercase;
+  background-color: #47b881;
+  color: white;
+}
+
+.adminNewProduct .photo__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.adminNewProduct .photo__box > div {
+  position: relative;
+  border: 0.5px solid #c4c4c4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  width: 149px;
+  height: 106px;
+}
+
+.adminNewProduct .photo__box > div > div {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  z-index: 0;
+}
+
+.video__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.video__box > div {
+  position: relative;
+  border: 0.5px solid #c4c4c4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  width: 149px;
+  height: 106px;
+}
+
+.video__box > div > div {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  z-index: 0;
+}
 /*# sourceMappingURL=App.css.map */
