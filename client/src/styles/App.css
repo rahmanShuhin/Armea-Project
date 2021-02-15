@@ -5208,4 +5208,74 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.adminClients {
+  margin: 70px 40px;
+}
+
+.adminClients > div:nth-child(1) > div {
+  color: #9ea0a5;
+  background: #ffffff;
+  border: 1px solid rgba(63, 63, 68, 0.005);
+  -webkit-box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+          box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px 5px;
+  width: 400px;
+}
+
+.adminClients > div:nth-child(1) > div > input {
+  outline: none;
+  border: none;
+  width: 378px;
+}
+
+.adminClients > div:nth-child(2) {
+  margin-top: 15px;
+}
+
+.adminNewProduct {
+  margin: 70px 40px;
+}
+
+.adminNewProduct__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adminNewProduct__top h3 {
+  margin-left: 10px;
+}
+
+.adminNewProduct__top button {
+  background: #3751ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adminNewProduct__top button .MuiSvgIcon-root {
+  font-size: 30px;
+  margin-left: 10px;
+}
 /*# sourceMappingURL=App.css.map */

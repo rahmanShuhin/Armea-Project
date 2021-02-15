@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
 }));
-const Products = () => {
+const Products = ({ setShowNew }) => {
   const classes = useStyles();
   const [age, setAge] = React.useState("");
 
@@ -43,7 +43,7 @@ const Products = () => {
           </div>
           <div>
             <div>
-              <button>
+              <button onClick={() => setShowNew(true)}>
                 <AddCircleIcon></AddCircleIcon>
               </button>
               <p>Nuevo producto</p>
