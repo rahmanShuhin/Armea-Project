@@ -39,8 +39,11 @@ const AllProduct = ({ min, max }) => {
         setCount(Math.ceil(backup.length / 6));
       }
     } else if (min && max) {
-      const pri = parseInt(max);
-      const newPro = fakeData.filter((x) => x.price <= pri && x.price >= pri);
+      const max_pri = parseInt(max);
+      const min_pri = parseInt(min);
+      const newPro = fakeData.filter(
+        (x) => x.price <= max_pri && x.price >= min_pri
+      );
       if (newPro.length === 0) {
         setCount(0);
         setBackup([]);
