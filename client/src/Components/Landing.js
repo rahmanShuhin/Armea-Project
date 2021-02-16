@@ -12,14 +12,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "@material-ui/core";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { Link } from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
 import Messenger from "./Messenger";
-// Import Swiper styles
-
-// install Swiper components
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
-
 const Landing = () => {
+  let history = useHistory();
   return (
     <div className="container">
       <div className="landing">
@@ -27,11 +24,8 @@ const Landing = () => {
           <div>
             <h2>Muebles que hacen</h2>
             <h2>click</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus deserunt cumque temporibus fugit
-            </p>
-            <Button>Comprar ahora</Button>
+            <p>Cada mueble representa un estilo de vida</p>
+            <Button onClick={() => history.push("/shop")}>Comprar ahora</Button>
           </div>
         </div>
         <div className="blurred-box-2">

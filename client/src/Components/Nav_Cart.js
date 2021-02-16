@@ -51,12 +51,18 @@ const Nav_Cart = () => {
       ))}
       <div>
         <h2>Total: ${total}</h2>
-        <button
-          disabled={products.length === 0}
-          onClick={() => history.push("/checkout")}
-        >
-          IR A LA CAJA
-        </button>
+        {cartProduct.length !== 0 ? (
+          <button
+            disabled={products.length === 0}
+            onClick={() => history.push("/checkout")}
+          >
+            IR A LA CAJA
+          </button>
+        ) : (
+          <button disabled={products.length === 0}>
+            Tu carrito esta vacío
+          </button>
+        )}
       </div>
     </div>
   );
