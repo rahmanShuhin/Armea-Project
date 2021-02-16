@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     flexDirection: "row-reverse",
   },
 });
-const SideBox = () => {
+const SideBox = ({ setMin, setMax }) => {
   const classes = useStyles();
   const [checked, setChecked] = React.useState(false);
 
@@ -37,14 +37,22 @@ const SideBox = () => {
             <p>Mínimo</p>
             <div>
               <p>$</p>
-              <input type="text" placeholder="549" />
+              <input
+                type="number"
+                placeholder="549"
+                onChange={(e) => setMin(e.target.value)}
+              />
             </div>
           </div>
           <div>
             <p>Máximo</p>
             <div>
               <p>$</p>
-              <input type="text" placeholder="549" />
+              <input
+                type="text"
+                placeholder="549"
+                onChange={(e) => setMax(e.target.value)}
+              />
             </div>
           </div>
         </div>

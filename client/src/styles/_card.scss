@@ -1,7 +1,7 @@
 .productCard {
   width: 295px;
-  height: 406px;
-  padding: 14px 34px;
+  min-height: 406px;
+  padding: 14px 0px;
   text-align: center;
   box-shadow: 0px 0px 10px lightgray;
   > img {

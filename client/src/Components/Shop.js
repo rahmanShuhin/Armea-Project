@@ -4,6 +4,8 @@ import { background } from "./Background";
 import SideBox from "./SideBox";
 const Shop = () => {
   const [count, setCount] = useState(0);
+  const [min, setMin] = useState(null);
+  const [max, setMax] = useState(null);
   setTimeout(() => {
     if (count === 2) {
       setCount(0);
@@ -28,8 +30,8 @@ const Shop = () => {
         </h2>
       </div>
       <div className="shop__container">
-        <SideBox></SideBox>
-        <AllProduct></AllProduct>
+        <SideBox setMin={setMin} setMax={setMax}></SideBox>
+        <AllProduct min={min} max={max}></AllProduct>
       </div>
     </div>
   );
