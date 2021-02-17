@@ -5,8 +5,10 @@ import Step2 from "./Checkout/Step2";
 import Step3 from "./Checkout/Step3";
 import CheckIcon from "@material-ui/icons/Check";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 const CheckOut = () => {
   const [step, setStep] = useState(1);
+  let history = useHistory();
   return (
     <div className="checkout">
       {step !== 4 && (
@@ -77,7 +79,7 @@ const CheckOut = () => {
             <h2>¡John! Creaste tu cuenta en Armea</h2>
             <Link>ver resumen</Link>
             <div className="btn_box">
-              <button>CONTINUAR</button>
+              <button onClick={() => history.push("/")}>CONTINUAR</button>
             </div>
           </div>
         </div>

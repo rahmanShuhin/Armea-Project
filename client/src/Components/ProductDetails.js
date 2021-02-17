@@ -10,8 +10,9 @@ import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
 import Timer from "react-compound-timer";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-
+import { useHistory } from "react-router-dom";
 const ProductDetails = () => {
+  let history = useHistory();
   const [img, setImg] = useState(0);
   const handleForward = () => {
     if (img !== fakeImg.length - 1) {
@@ -134,8 +135,10 @@ const ProductDetails = () => {
                 </div>
               </div>
               <div className="button__box">
-                <button>COMPRAR</button>
-                <button>ELIMINAR</button>
+                <button onClick={() => history.push("/checkout")}>
+                  COMPRAR
+                </button>
+                <button onClick={() => history.push("/shop")}>ELIMINAR</button>
               </div>
             </div>
           </div>

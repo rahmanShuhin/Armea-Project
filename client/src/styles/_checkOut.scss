@@ -126,6 +126,37 @@
   .CardField {
     background-color: red;
   }
+  form {
+    p {
+      margin-bottom: 10px;
+    }
+    select {
+      background: white;
+      margin-right: 10px;
+      border: none;
+      border-bottom: 1px solid red;
+      padding: 8px 12px;
+    }
+    input {
+      background: #f4f5f7;
+      padding: 10px 12px;
+      border: 0px;
+      outline: none;
+    }
+    > div:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    > div:not(:first-child) {
+      display: flex;
+      justify-content: space-between;
+      > div {
+        flex: 1;
+        margin: 10px 0px;
+      }
+    }
+  }
 }
 .step3 {
   width: 766px;
