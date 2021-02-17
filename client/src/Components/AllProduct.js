@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { fakeData } from "./fakeData";
 import ProductCard from "./ProductCard";
 
-const AllProduct = ({ min, max }) => {
+const AllProduct = ({ min, max, search, catgTypes }) => {
   const [products, setProducts] = useState([]);
   const [backup, setBackup] = useState([]);
   const [val, setVal] = useState(1);
@@ -22,7 +22,6 @@ const AllProduct = ({ min, max }) => {
     const num1 = (val - 1) * 6;
     const num2 = val * 6;
     setProducts(backup.slice(num1, num2));
-    console.log(backup);
   }, [val, backup]);
 
   useEffect(() => {
@@ -71,6 +70,78 @@ const AllProduct = ({ min, max }) => {
     }
   }, [min, max]);
 
+  useEffect(() => {
+    if (search) {
+      let inp = search.toLowerCase();
+      const newPro = fakeData.filter((x) => {
+        let pd = x.productName.toLowerCase();
+        if (pd.search(inp) !== -1) {
+          return x;
+        }
+      });
+      setBackup(newPro);
+      setVal(1);
+      setCount(Math.ceil(backup.length / 6));
+    } else {
+      setBackup(fakeData);
+    }
+  }, [search]);
+
+  useEffect(() => {
+    if (
+      catgTypes.Escritorio ||
+      catgTypes.Sofa ||
+      catgTypes.Silla ||
+      catgTypes.Comoda ||
+      catgTypes.Biblioteca
+    ) {
+      let grand = "";
+      if (catgTypes.Escritorio) {
+        const pd = fakeData.filter((x) => x.catg === "Escritorio");
+        grand = [...pd];
+        console.log(grand);
+        setBackup(grand);
+        setVal(1);
+        setCount(Math.ceil(backup.length / 6));
+      }
+      if (catgTypes.Sofa) {
+        const pd = fakeData.filter((x) => x.catg === "Sofa");
+        grand = [...grand, ...pd];
+        console.log(grand);
+        setBackup(grand);
+        setVal(1);
+        setCount(Math.ceil(backup.length / 6));
+      }
+      if (catgTypes.Silla) {
+        const pd = fakeData.filter((x) => x.catg === "Silla");
+        grand = [...grand, ...pd];
+        console.log(grand);
+        setBackup(grand);
+        setVal(1);
+        setCount(Math.ceil(backup.length / 6));
+      }
+      if (catgTypes.Comoda) {
+        const pd = fakeData.filter((x) => x.catg === "Comoda");
+        grand = [...grand, ...pd];
+        console.log(grand);
+        setBackup(grand);
+        setVal(1);
+        setCount(Math.ceil(backup.length / 6));
+      }
+      if (catgTypes.Biblioteca) {
+        const pd = fakeData.filter((x) => x.catg === "Biblioteca");
+        grand = [...grand, ...pd];
+        console.log(grand);
+        setBackup(grand);
+        setVal(1);
+        setCount(Math.ceil(backup.length / 6));
+      }
+    } else {
+      setBackup(fakeData);
+      setVal(1);
+      setCount(Math.ceil(backup.length / 6));
+    }
+  }, [catgTypes]);
   // useEffect(() => {
   //   if (max) {
   //     const pri = parseInt(max);

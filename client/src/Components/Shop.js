@@ -6,6 +6,15 @@ const Shop = () => {
   const [count, setCount] = useState(0);
   const [min, setMin] = useState(null);
   const [max, setMax] = useState(null);
+  const [search, setSearch] = useState(null);
+  const [catg, setCatg] = useState(null);
+  const [catgTypes, setCatgTypes] = useState({
+    Escritorio: false,
+    Sofa: false,
+    Silla: false,
+    Comoda: false,
+    Biblioteca: false,
+  });
   setTimeout(() => {
     if (count === 2) {
       setCount(0);
@@ -30,8 +39,20 @@ const Shop = () => {
         </h2>
       </div>
       <div className="shop__container">
-        <SideBox setMin={setMin} setMax={setMax}></SideBox>
-        <AllProduct min={min} max={max}></AllProduct>
+        <SideBox
+          setMin={setMin}
+          setMax={setMax}
+          setSearch={setSearch}
+          setCatg={setCatg}
+          catgTypes={catgTypes}
+          setCatgTypes={setCatgTypes}
+        ></SideBox>
+        <AllProduct
+          min={min}
+          max={max}
+          search={search}
+          catgTypes={catgTypes}
+        ></AllProduct>
       </div>
     </div>
   );

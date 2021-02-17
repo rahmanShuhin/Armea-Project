@@ -14,19 +14,53 @@ const useStyles = makeStyles({
     flexDirection: "row-reverse",
   },
 });
-const SideBox = ({ setMin, setMax }) => {
+const SideBox = ({ setMin, setMax, setSearch, catgTypes, setCatgTypes }) => {
   const classes = useStyles();
   const [checked, setChecked] = React.useState(false);
+  const [checked1, setChecked1] = React.useState(false);
+  const [checked2, setChecked2] = React.useState(false);
+  const [checked3, setChecked3] = React.useState(false);
+  const [checked4, setChecked4] = React.useState(false);
+  const [checked5, setChecked5] = React.useState(false);
 
   const handleChange = (event) => {
-    setChecked(event.target.checked);
+    if (event.target.name === "Escritorio") {
+      setChecked1(event.target.checked);
+      const ctg = { ...catgTypes };
+      ctg.Escritorio = event.target.checked;
+      setCatgTypes(ctg);
+    } else if (event.target.name === "Sofa") {
+      setChecked2(event.target.checked);
+      const ctg = { ...catgTypes };
+      ctg.Sofa = event.target.checked;
+      setCatgTypes(ctg);
+    } else if (event.target.name === "Silla") {
+      setChecked3(event.target.checked);
+      const ctg = { ...catgTypes };
+      ctg.Silla = event.target.checked;
+      setCatgTypes(ctg);
+    } else if (event.target.name === "Comoda") {
+      setChecked4(event.target.checked);
+      const ctg = { ...catgTypes };
+      ctg.Comoda = event.target.checked;
+      setCatgTypes(ctg);
+    } else if (event.target.name === "Biblioteca") {
+      setChecked5(event.target.checked);
+      const ctg = { ...catgTypes };
+      ctg.Biblioteca = event.target.checked;
+      setCatgTypes(ctg);
+    }
   };
   return (
     <div className="sideBox">
       <div className="sideBox__top">
         <h2>Buscar</h2>
         <div>
-          <input type="text" placeholder="¿Qué buscas?" />
+          <input
+            type="text"
+            placeholder="¿Qué buscas?"
+            onChange={(e) => setSearch(e.target.value)}
+          />
           <SearchIcon></SearchIcon>
         </div>
       </div>
@@ -67,7 +101,8 @@ const SideBox = ({ setMin, setMax }) => {
           <TreeItem nodeId="1" label="Muebles">
             <div className="checkBox__container">
               <Checkbox
-                checked={checked}
+                name="Escritorio"
+                checked={checked1}
                 onChange={handleChange}
                 inputProps={{ "aria-label": "primary checkbox" }}
               />
@@ -75,7 +110,8 @@ const SideBox = ({ setMin, setMax }) => {
             </div>
             <div className="checkBox__container">
               <Checkbox
-                checked={checked}
+                name="Sofa"
+                checked={checked2}
                 onChange={handleChange}
                 inputProps={{ "aria-label": "primary checkbox" }}
               />
@@ -83,7 +119,8 @@ const SideBox = ({ setMin, setMax }) => {
             </div>
             <div className="checkBox__container">
               <Checkbox
-                checked={checked}
+                name="Silla"
+                checked={checked3}
                 onChange={handleChange}
                 inputProps={{ "aria-label": "primary checkbox" }}
               />
@@ -91,7 +128,8 @@ const SideBox = ({ setMin, setMax }) => {
             </div>
             <div className="checkBox__container">
               <Checkbox
-                checked={checked}
+                name="Comoda"
+                checked={checked4}
                 onChange={handleChange}
                 inputProps={{ "aria-label": "primary checkbox" }}
               />
@@ -99,7 +137,8 @@ const SideBox = ({ setMin, setMax }) => {
             </div>
             <div className="checkBox__container">
               <Checkbox
-                checked={checked}
+                name="Biblioteca"
+                checked={checked5}
                 onChange={handleChange}
                 inputProps={{ "aria-label": "primary checkbox" }}
               />
@@ -107,6 +146,7 @@ const SideBox = ({ setMin, setMax }) => {
             </div>
             <div className="checkBox__container">
               <Checkbox
+                name="Comoda"
                 checked={checked}
                 onChange={handleChange}
                 inputProps={{ "aria-label": "primary checkbox" }}

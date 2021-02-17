@@ -15,6 +15,7 @@ export const fakeData = [
     img: desk,
     price: 989,
     id: "1",
+    catg: "Escritorio",
   },
   {
     productName: "Casa para gato Mod. Tavolino",
@@ -22,6 +23,7 @@ export const fakeData = [
     img: tienda_1,
     price: 999,
     id: "2",
+    catg: "Escritorio",
   },
   {
     productName: "Casa para perro Mod. Lusso",
@@ -29,6 +31,7 @@ export const fakeData = [
     img: pet,
     price: 1999,
     id: "3",
+    catg: "Escritorio",
   },
   {
     productName: "Casa para gato Mod. Tavolo",
@@ -36,6 +39,7 @@ export const fakeData = [
     img: tienda_2,
     price: 999,
     id: "4",
+    catg: "Silla",
   },
   {
     productName: "Sillon de lectura Mod. Sedia",
@@ -43,6 +47,7 @@ export const fakeData = [
     img: tienda_3,
     price: 19,
     id: "5",
+    catg: "Sofa",
   },
   {
     productName: "Parchero",
@@ -50,6 +55,7 @@ export const fakeData = [
     img: tienda_4,
     price: 199,
     id: "6",
+    catg: "Comoda",
   },
   {
     productName: "Escritorio Montessori-7",
@@ -57,6 +63,7 @@ export const fakeData = [
     img: desk,
     price: 999,
     id: "7",
+    catg: "Escritorio",
   },
   {
     productName: "Escritorio Montessori",
@@ -64,6 +71,7 @@ export const fakeData = [
     img: desk,
     price: 999,
     id: "8",
+    catg: "Escritorio",
   },
   {
     productName: "Escritorio Montessori",
@@ -71,6 +79,7 @@ export const fakeData = [
     img: desk,
     price: 999,
     id: "9",
+    catg: "Escritorio",
   },
   {
     productName: "Escritorio Montessori",
@@ -78,6 +87,7 @@ export const fakeData = [
     img: desk,
     price: 999,
     id: "10",
+    catg: "Escritorio",
   },
   {
     productName: "Escritorio Montessori",
@@ -85,6 +95,7 @@ export const fakeData = [
     img: desk,
     price: 999,
     id: "11",
+    catg: "Escritorio",
   },
 ];
 
