@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import Timer from "react-compound-timer";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { useHistory } from "react-router-dom";
+import desk from "../images/desk.png";
 const ProductDetails = () => {
   let history = useHistory();
   const [img, setImg] = useState(0);
@@ -83,7 +84,8 @@ const ProductDetails = () => {
           <div>
             <div>
               <h2>
-                Escritorio Montessori <FavoriteBorderIcon></FavoriteBorderIcon>
+                Casa para gato Mod. Tavolo{" "}
+                <FavoriteBorderIcon></FavoriteBorderIcon>
               </h2>
 
               <StarRatings
@@ -148,7 +150,7 @@ const ProductDetails = () => {
             </h2>
             <div className="productCombo">
               <div>
-                <img src={fakeImg[0]} alt="" />
+                <img src={desk} alt="" />
                 <StarRatings
                   rating={5}
                   starRatedColor="#ff6606"
@@ -161,7 +163,7 @@ const ProductDetails = () => {
               </div>
               <p>+</p>
               <div>
-                <img src={fakeImg[0]} alt="" />
+                <img src={desk} alt="" />
                 <StarRatings
                   rating={5}
                   starRatedColor="#ff6606"

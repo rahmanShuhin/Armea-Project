@@ -7,6 +7,11 @@ import tienda_1 from "../images/tienda_1.png";
 import tienda_2 from "../images/tienda_2.png";
 import tienda_3 from "../images/tienda_3.png";
 import tienda_4 from "../images/tienda_4.png";
+import details_1 from "../images/details_1.png";
+import details_2 from "../images/details_2.png";
+import details_3 from "../images/details_3.png";
+import details_4 from "../images/details_4.png";
+import details_5 from "../images/details_5.png";
 
 export const fakeData = [
   {
@@ -99,7 +104,7 @@ export const fakeData = [
   },
 ];
 
-export const fakeImg = [desk, children, decor, desk, children];
+export const fakeImg = [details_1, details_2, details_3, details_4, details_5];
 
 export const fakeBlog = [
   {
