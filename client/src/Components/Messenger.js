@@ -10,7 +10,7 @@ const Messenger = () => {
   const [input, setInput] = useState("");
   const chatStyle = useSpring({
     opacity: 1,
-    right: 210,
+    right: 30,
     from: { opacity: 0, right: -0 },
   });
   const chatStyle2 = useSpring({

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import desk from "../images/desk.png";
+import pop_up from "../images/pop_up.png";
+import { useHistory } from "react-router-dom";
 const Modal = () => {
+  let history = useHistory();
   const handleClose = () => {
     const modal = document.getElementById("myModal");
     modal.style.display = "none";
@@ -16,7 +18,7 @@ const Modal = () => {
       <div id="myModal" class="modal">
         <div class="modal-content">
           <div>
-            <img src={desk} alt="" />
+            <img src={pop_up} alt="" />
           </div>
           <div>
             <span class="close" onClick={handleClose}>
@@ -29,7 +31,9 @@ const Modal = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                 a pretium elit
               </p>
-              <button>LO QUIERO</button>
+              <button onClick={() => history.push("/checkout")}>
+                LO QUIERO
+              </button>
             </div>
           </div>
         </div>

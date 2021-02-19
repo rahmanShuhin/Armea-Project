@@ -49,8 +49,9 @@
           display: grid;
           place-items: center;
           > img {
-            object-fit: contain;
             text-align: center;
+            object-fit: fill;
+            max-height: 374px;
           }
           > button {
             position: absolute;

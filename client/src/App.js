@@ -96,7 +96,7 @@ function App() {
             <Footer></Footer>
           </Route>
 
-          <Route exact path="/product">
+          <Route exact path="/product/:id">
             <Navigation></Navigation>
             <ProductDetails></ProductDetails>
             <Footer></Footer>

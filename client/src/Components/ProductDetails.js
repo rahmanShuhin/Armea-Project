@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { fakeData, fakeImg } from "./fakeData";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
@@ -7,13 +7,15 @@ import StarRatings from "react-star-ratings";
 import thumbnail_1 from "../images/thumbnail_1.png";
 import thumbnail_2 from "../images/thumbnail_2.png";
 import ProductCard from "./ProductCard";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Timer from "react-compound-timer";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { useHistory } from "react-router-dom";
 import desk from "../images/desk.png";
 const ProductDetails = () => {
+  const { id } = useParams();
   let history = useHistory();
+  const [products, setProducts] = useState("");
   const [img, setImg] = useState(0);
   const handleForward = () => {
     if (img !== fakeImg.length - 1) {
@@ -25,6 +27,12 @@ const ProductDetails = () => {
       setImg(img - 1);
     }
   };
+
+  useEffect(() => {
+    const pd = fakeData.find((x) => x.id === id);
+    setProducts(pd);
+    console.log(pd);
+  }, [id]);
   return (
     <div>
       <div className="offer_timer">
@@ -56,13 +64,16 @@ const ProductDetails = () => {
           <div>
             <div>
               <div>
-                {fakeImg.map((x, index) => {
-                  if (index !== img) {
-                    return <img src={x} alt="" onClick={() => setImg(index)} />;
-                  } else {
-                    return <></>;
-                  }
-                })}
+                {products.length !== 0 &&
+                  products.allImg.map((x, index) => {
+                    if (index !== img) {
+                      return (
+                        <img src={x} alt="" onClick={() => setImg(index)} />
+                      );
+                    } else {
+                      return <></>;
+                    }
+                  })}
               </div>
               <div>
                 <button
@@ -71,7 +82,10 @@ const ProductDetails = () => {
                 >
                   <ArrowBackIosIcon></ArrowBackIosIcon>
                 </button>
-                <img src={fakeImg[img]} alt="" />
+                <img
+                  src={products.length !== 0 && products.allImg[img]}
+                  alt=""
+                />
                 <button
                   onClick={handleForward}
                   className={img === fakeImg.length - 1 && "disable-btn"}
@@ -84,7 +98,7 @@ const ProductDetails = () => {
           <div>
             <div>
               <h2>
-                Casa para gato Mod. Tavolo{" "}
+                {products?.productName}
                 <FavoriteBorderIcon></FavoriteBorderIcon>
               </h2>
 
@@ -114,10 +128,9 @@ const ProductDetails = () => {
               </div>
               <p>Descripción</p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                a pretium elit, sed efficitur enim. Quisque fermentum fermentum
-                lectus. Nullam laoreet ante odio, non commodo ante pellentesque
-                ut. Nullam mollis dictum erat.
+                La casa para gatitos Tavolo tiene un diseño elegante y
+                decorativo, está disponible en una variedad de colores para que
+                la puedas combinar con cualquier espacio.
               </p>
               <div className="price_box">
                 <div className="color__box">

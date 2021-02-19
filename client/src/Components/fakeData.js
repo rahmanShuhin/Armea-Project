@@ -4,6 +4,10 @@ import children from "../images/children.png";
 import pet from "../images/pet.png";
 import blogPost from "../images/blogPost.png";
 import tienda_1 from "../images/tienda_1.png";
+import tienda_1_2 from "../images/tienda_1_2.png";
+import tienda_1_3 from "../images/tienda_1_3.png";
+import tienda_1_4 from "../images/tienda_1_4.png";
+import tienda_1_5 from "../images/tienda_1_5.png";
 import tienda_2 from "../images/tienda_2.png";
 import tienda_3 from "../images/tienda_3.png";
 import tienda_4 from "../images/tienda_4.png";
@@ -21,6 +25,7 @@ export const fakeData = [
     price: 989,
     id: "1",
     catg: "Escritorio",
+    allImg: [desk, desk, desk, desk, desk],
   },
   {
     productName: "Casa para gato Mod. Tavolino",
@@ -29,6 +34,7 @@ export const fakeData = [
     price: 999,
     id: "2",
     catg: "Escritorio",
+    allImg: [tienda_1, tienda_1_2, tienda_1_3, tienda_1_4, tienda_1_5],
   },
   {
     productName: "Casa para perro Mod. Lusso",
@@ -37,6 +43,7 @@ export const fakeData = [
     price: 1999,
     id: "3",
     catg: "Escritorio",
+    allImg: [pet, pet, pet, pet, pet],
   },
   {
     productName: "Casa para gato Mod. Tavolo",
@@ -45,6 +52,7 @@ export const fakeData = [
     price: 999,
     id: "4",
     catg: "Silla",
+    allImg: [details_1, details_2, details_3, details_4, details_5],
   },
   {
     productName: "Sillon de lectura Mod. Sedia",
@@ -53,6 +61,7 @@ export const fakeData = [
     price: 19,
     id: "5",
     catg: "Sofa",
+    allImg: [tienda_3, tienda_3, tienda_3, tienda_3, tienda_3],
   },
   {
     productName: "Parchero",
@@ -61,6 +70,7 @@ export const fakeData = [
     price: 199,
     id: "6",
     catg: "Comoda",
+    allImg: [tienda_4, tienda_4, tienda_4, tienda_4, tienda_4],
   },
   {
     productName: "Escritorio Montessori-7",
@@ -69,6 +79,7 @@ export const fakeData = [
     price: 999,
     id: "7",
     catg: "Escritorio",
+    allImg: [desk, desk, desk, desk, desk],
   },
   {
     productName: "Escritorio Montessori",
@@ -77,6 +88,7 @@ export const fakeData = [
     price: 999,
     id: "8",
     catg: "Escritorio",
+    allImg: [desk, desk, desk, desk, desk],
   },
   {
     productName: "Escritorio Montessori",
@@ -85,6 +97,7 @@ export const fakeData = [
     price: 999,
     id: "9",
     catg: "Escritorio",
+    allImg: [desk, desk, desk, desk, desk],
   },
   {
     productName: "Escritorio Montessori",
@@ -93,6 +106,7 @@ export const fakeData = [
     price: 999,
     id: "10",
     catg: "Escritorio",
+    allImg: [desk, desk, desk, desk, desk],
   },
   {
     productName: "Escritorio Montessori",
@@ -101,6 +115,7 @@ export const fakeData = [
     price: 999,
     id: "11",
     catg: "Escritorio",
+    allImg: [desk, desk, desk, desk, desk],
   },
 ];
 
