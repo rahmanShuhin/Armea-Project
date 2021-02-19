@@ -12,8 +12,13 @@ import Timer from "react-compound-timer";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { useHistory } from "react-router-dom";
 import desk from "../images/desk.png";
+import { addToCart } from "./actions";
+import { useSelector, useDispatch } from "react-redux";
 const ProductDetails = () => {
   const { id } = useParams();
+  const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1);
+  const [active, setActive] = useState(1);
   let history = useHistory();
   const [products, setProducts] = useState("");
   const [img, setImg] = useState(0);
@@ -134,25 +139,45 @@ const ProductDetails = () => {
               </p>
               <div className="price_box">
                 <div className="color__box">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
+                  <div
+                    className={active === 1 && "active"}
+                    onClick={() => setActive(1)}
+                  ></div>
+                  <div
+                    className={active === 2 && "active"}
+                    onClick={() => setActive(2)}
+                  ></div>
+                  <div
+                    className={active === 3 && "active"}
+                    onClick={() => setActive(3)}
+                  ></div>
+                  <div
+                    className={active === 4 && "active"}
+                    onClick={() => setActive(4)}
+                  ></div>
                 </div>
                 <div>
-                  <button>
+                  <button
+                    onClick={() => quantity !== 1 && setQuantity(quantity - 1)}
+                  >
                     <ArrowBackIosIcon></ArrowBackIosIcon>
                   </button>
-                  <p>1 Unidad</p>
-                  <button>
+                  <p>{quantity} Unidad</p>
+                  <button onClick={() => setQuantity(quantity + 1)}>
                     <ArrowForwardIosIcon></ArrowForwardIosIcon>
                   </button>
                 </div>
               </div>
               <div className="button__box">
-                <button onClick={() => history.push("/checkout")}>
+                <button
+                  onClick={() => {
+                    history.push("/checkout");
+                    dispatch(addToCart(`${id}`));
+                  }}
+                >
                   COMPRAR
                 </button>
+
                 <button onClick={() => history.push("/shop")}>ELIMINAR</button>
               </div>
             </div>
@@ -192,8 +217,21 @@ const ProductDetails = () => {
                   <small style={{ fontWeight: "normal" }}>Precio:</small> 1997$
                   <span style={{ color: "#FF7E2E " }}>-30%</span>
                 </h4>
-                <button>COMPRAR</button>
-                <button>AÑADIR</button>
+                <button
+                  onClick={() => {
+                    history.push("/checkout");
+                    dispatch(addToCart("1"));
+                  }}
+                >
+                  COMPRAR
+                </button>
+                <button
+                  onClick={() => {
+                    dispatch(addToCart("1"));
+                  }}
+                >
+                  AÑADIR
+                </button>
               </div>
             </div>
             <div className="productDetails__card">

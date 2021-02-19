@@ -1748,7 +1748,25 @@ a {
   display: flex;
 }
 
+.productDetails__top > div:nth-of-type(2) > div .price_box .color__box .active {
+  position: relative;
+}
+
+.productDetails__top > div:nth-of-type(2) > div .price_box .color__box .active::after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  border-radius: 150%;
+  border: 1px solid #ff6606;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .productDetails__top > div:nth-of-type(2) > div .price_box .color__box div {
+  cursor: pointer;
   width: 15px;
   height: 15px;
   border-radius: 50%;

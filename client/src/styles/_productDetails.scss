@@ -125,7 +125,22 @@
           align-items: center !important;
           .color__box {
             display: flex;
+            .active {
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                width: 27px;
+                height: 27px;
+                border-radius: 150%;
+                border: 1px solid $primary;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
             div {
+              cursor: pointer;
               width: 15px;
               height: 15px;
               border-radius: 50%;
