@@ -41,7 +41,14 @@ const NewProduct = () => {
             starDimension="20px"
           />
           <div>
-            <button onClick={() => history.push("/product")}>COMPRAR</button>
+            <button
+              onClick={() => {
+                history.push("/checkout");
+                dispatch(addToCart("1"));
+              }}
+            >
+              COMPRAR
+            </button>
             <button onClick={() => dispatch(addToCart("1"))}>AÑADIR</button>
           </div>
         </div>
