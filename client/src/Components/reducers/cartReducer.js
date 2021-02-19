@@ -24,7 +24,7 @@ const handleAddToCart = (state, action) => {
       ...state,
       {
         id: action.id,
-        quantity: 1,
+        quantity: action.quantity,
       },
     ];
   } else {

@@ -12,7 +12,7 @@ import Timer from "react-compound-timer";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { useHistory } from "react-router-dom";
 import desk from "../images/desk.png";
-import { addToCart } from "./actions";
+import { addToCart, removeFromCart } from "./actions";
 import { useSelector, useDispatch } from "react-redux";
 const ProductDetails = () => {
   const { id } = useParams();
@@ -172,13 +172,15 @@ const ProductDetails = () => {
                 <button
                   onClick={() => {
                     history.push("/checkout");
-                    dispatch(addToCart(`${id}`));
+                    dispatch(addToCart(id, quantity));
                   }}
                 >
                   COMPRAR
                 </button>
 
-                <button onClick={() => history.push("/shop")}>ELIMINAR</button>
+                <button onClick={() => dispatch(removeFromCart(id))}>
+                  ELIMINAR
+                </button>
               </div>
             </div>
           </div>

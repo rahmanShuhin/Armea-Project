@@ -1,7 +1,8 @@
-export const addToCart = (id) => {
+export const addToCart = (id, quantity = 1) => {
   return {
     type: "ADD_TO_CART",
     id,
+    quantity,
   };
 };
 export const removeFromCart = (id) => {
