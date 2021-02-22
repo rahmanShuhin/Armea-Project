@@ -28,8 +28,8 @@ const Modal = () => {
               <small>Solo por hoy</small>
               <h2>-20% EN MUEBLES </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                a pretium elit
+                Accede a nuestro catálogo online y encuentra el mueble que
+                combina con tu personalidad
               </p>
               <button onClick={() => history.push("/checkout")}>
                 LO QUIERO
