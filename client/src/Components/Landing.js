@@ -24,14 +24,14 @@ const Landing = () => {
           <div>
             <h2>Muebles que hacen</h2>
             <h2>click</h2>
-            <p>Cada mueble representa un estilo de vida</p>
+            <p>Cada mueble representa un estilo de vida .</p>
             <Button onClick={() => history.push("/shop")}>Comprar ahora</Button>
           </div>
         </div>
         <div className="blurred-box-2">
           <div>
             <h3>Escritorio Montessori</h3>
-            <p>Para tus ninos</p>
+            <p>Para tus niños</p>
             <div>
               <h3>$ 1990</h3>
               <Link>

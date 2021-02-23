@@ -4,12 +4,12 @@ import blogPost1 from "../images/blogPost1.png";
 import blogPost from "../images/blogPost.png";
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import AccountCircleRoundedIcon from "@material-ui/icons/AccountCircleRounded";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const BlogSlide = () => {
   let history = useHistory();
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -116,6 +116,9 @@ const BlogSlide = () => {
             </div>
           </div>
         </Slider>
+      </div>
+      <div className="blog_btn">
+        <Link to="/blog">IR AL BLOG</Link>
       </div>
     </div>
   );

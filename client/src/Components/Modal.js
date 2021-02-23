@@ -29,7 +29,7 @@ const Modal = () => {
               <h2>-20% EN MUEBLES </h2>
               <p>
                 Accede a nuestro catálogo online y encuentra el mueble que
-                combina con tu personalidad
+                combina con tu personalidad .
               </p>
               <button onClick={() => history.push("/checkout")}>
                 LO QUIERO

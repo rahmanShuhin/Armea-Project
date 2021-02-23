@@ -28,10 +28,7 @@ const NewProduct = () => {
       <div>
         <div className="newProduct__left">
           <h2>Escritorio Montessori</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a
-            pretium elit
-          </p>
+          <p>Simple y real. Todo tiene su razón de ser.</p>
           <StarRatings
             rating={5}
             starRatedColor="#ff6606"

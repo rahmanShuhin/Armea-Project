@@ -12,7 +12,7 @@ const Footer = () => {
           <img src={logo} alt="" />
         </div>
         <div>
-          <h3>Informacion</h3>
+          <h3>Información</h3>
           <Link to="/shippingAres">Zonas de envío</Link>
           <Link to="/cookies">Política de cookies</Link>
           <Link to="/terms-of-use">Condiciones de uso y compra</Link>
@@ -27,9 +27,9 @@ const Footer = () => {
         </div>
         <div>
           <h3>Contacto</h3>
-          <Link>Mariano escobedo 2631 col. victoria monterry n.l.</Link>
+          <Link>Mariano Escobedo 2631 Col. Victoria Monterrey N.L.</Link>
           <p>
-            <LocationOnRoundedIcon></LocationOnRoundedIcon> Mexico
+            <LocationOnRoundedIcon></LocationOnRoundedIcon> México
           </p>
           <p>
             <CallRoundedIcon></CallRoundedIcon>
@@ -39,7 +39,7 @@ const Footer = () => {
           <p>armeamuebles.com</p>
         </div>
         <div>
-          <h3>Suscribete</h3>
+          <h3>Suscríbete</h3>
           <div className="sendEmail">
             <input type="text" placeholder="Ingresa email" />
             <button>

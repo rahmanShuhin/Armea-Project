@@ -90,7 +90,7 @@ const HighProducts = () => {
         </div>
         <div className="swiper__box">
           <Slider {...settings} onChange={() => alert()}>
-            <div className="children__product">
+            <Link to="/shop" className="children__product">
               <div>
                 <div>
                   <p>Categoria</p>
@@ -100,8 +100,8 @@ const HighProducts = () => {
                   <ArrowForwardIcon></ArrowForwardIcon>
                 </Link>
               </div>
-            </div>
-            <div className="decor__product">
+            </Link>
+            <Link to="/shop" className="decor__product">
               <div>
                 <div>
                   <p>Categoria</p>
@@ -111,8 +111,8 @@ const HighProducts = () => {
                   <ArrowForwardIcon></ArrowForwardIcon>
                 </Link>
               </div>
-            </div>
-            <div className="pet__product">
+            </Link>
+            <Link to="/shop" className="pet__product">
               <div>
                 <div>
                   <p>Categoria</p>
@@ -122,7 +122,7 @@ const HighProducts = () => {
                   <ArrowForwardIcon></ArrowForwardIcon>
                 </Link>
               </div>
-            </div>
+            </Link>
             <div className="desk__product">
               <div>
                 <div>
