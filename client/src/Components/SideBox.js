@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TreeView from "@material-ui/lab/TreeView";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -22,6 +22,34 @@ const SideBox = ({ setMin, setMax, setSearch, catgTypes, setCatgTypes }) => {
   const [checked3, setChecked3] = React.useState(false);
   const [checked4, setChecked4] = React.useState(false);
   const [checked5, setChecked5] = React.useState(false);
+  const [color1, setColor1] = useState(true);
+  const [color2, setColor2] = useState(false);
+  const [color3, setColor3] = useState(false);
+  const [color4, setColor4] = useState(false);
+
+  const handleColorChange = (e) => {
+    if (e.target.name === "color1") {
+      setColor1(true);
+      setColor2(false);
+      setColor3(false);
+      setColor4(false);
+    } else if (e.target.name === "color2") {
+      setColor1(false);
+      setColor2(true);
+      setColor3(false);
+      setColor4(false);
+    } else if (e.target.name === "color3") {
+      setColor1(false);
+      setColor2(false);
+      setColor3(true);
+      setColor4(false);
+    } else {
+      setColor1(false);
+      setColor2(false);
+      setColor3(false);
+      setColor4(true);
+    }
+  };
 
   const handleChange = (event) => {
     if (event.target.name === "Escritorio") {
@@ -309,17 +337,33 @@ const SideBox = ({ setMin, setMax, setSearch, catgTypes, setCatgTypes }) => {
       <div className="sideBox__colorCheck">
         <h2 className="h2">Color</h2>
         <div>
-          <div>
-            <input type="checkbox" name="" id="" />
+          <div className={color1 && "active"}>
+            <input
+              type="checkbox"
+              name="color1"
+              onChange={(e) => handleColorChange(e)}
+            />
           </div>
-          <div>
-            <input type="checkbox" name="" id="" />
+          <div className={color2 && "active"}>
+            <input
+              type="checkbox"
+              name="color2"
+              onChange={(e) => handleColorChange(e)}
+            />
           </div>
-          <div>
-            <input type="checkbox" name="" id="" />
+          <div className={color3 && "active"}>
+            <input
+              type="checkbox"
+              name="color3"
+              onChange={(e) => handleColorChange(e)}
+            />
           </div>
-          <div>
-            <input type="checkbox" name="" id="" />
+          <div className={color4 && "active"}>
+            <input
+              type="checkbox"
+              name="color4"
+              onChange={(e) => handleColorChange(e)}
+            />
           </div>
           <p>Todos</p>
         </div>

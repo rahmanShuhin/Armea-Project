@@ -44,6 +44,7 @@ const Login = () => {
         console.log(json);
         if (json.error) {
           setErr(json);
+          setDis(false);
         } else {
           var decoded = jwt_decode(json.token);
           console.log(decoded);

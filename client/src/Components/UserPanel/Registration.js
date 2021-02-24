@@ -109,8 +109,13 @@ const Registration = () => {
             <div>
               <input type="checkbox" required name="checkbox" ref={register} />
               <small>
-                Acepto los Términos y Condiciones y autorizo el uso de mis datos
-                de acuerdo a la Declaración de Privacidad.
+                &nbsp; Acepto los{" "}
+                <Link to="/terms-of-use" style={{ color: "#ff6606" }}>
+                  Términos y Condiciones
+                </Link>{" "}
+                y autorizo el uso de mis datos de acuerdo a la
+                <Link style={{ color: "#ff6606" }}> Declaración de</Link>{" "}
+                Privacidad.
               </small>
             </div>
 

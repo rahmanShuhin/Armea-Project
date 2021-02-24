@@ -44,7 +44,7 @@ const Navigation = () => {
           {!search && user.user && (
             <div className="profile__img">
               <Link to="/profile">
-                <Avatar></Avatar>
+                <Avatar src="https://manofmany.com/wp-content/uploads/2019/06/50-Long-Haircuts-Hairstyle-Tips-for-Men-2.jpg"></Avatar>
               </Link>
               <Link to="/profile">
                 <p>{user.name}</p>

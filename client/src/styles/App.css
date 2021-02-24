@@ -1321,18 +1321,35 @@ a {
   max-width: 190px;
 }
 
+.sideBox__colorCheck .active {
+  position: relative;
+}
+
+.sideBox__colorCheck .active::after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  border-radius: 150%;
+  border: 1px solid #ff6606;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .sideBox__colorCheck > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 8px;
+  padding: 10px;
 }
 
 .sideBox__colorCheck > div > div {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -122,14 +122,28 @@
   }
   &__colorCheck {
     max-width: 190px;
+    .active {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 27px;
+        height: 27px;
+        border-radius: 150%;
+        border: 1px solid $primary;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
     > div {
       display: flex;
       margin-top: 8px;
+      padding: 10px;
       > div {
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        background-color: red;
         display: flex;
         align-items: center;
         justify-content: center;

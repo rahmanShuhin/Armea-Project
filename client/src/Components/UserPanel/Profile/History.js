@@ -31,7 +31,16 @@ const History = () => {
               <th>Fecha</th>
               <th>Monto</th>
             </tr>
-            <tr>
+            {/* <tr>
+              <td>Escritorio Montesorri</td>
+              <td>3</td>
+              <td>12/2020</td>
+              <td>999$</td>
+              <td>
+                <button onClick={handleMOdal}>ver</button>
+              </td>
+            </tr> */}
+            {/* <tr>
               <td>Escritorio Montesorri</td>
               <td>3</td>
               <td>12/2020</td>
@@ -75,16 +84,7 @@ const History = () => {
               <td>
                 <button onClick={handleMOdal}>ver</button>
               </td>
-            </tr>
-            <tr>
-              <td>Escritorio Montesorri</td>
-              <td>3</td>
-              <td>12/2020</td>
-              <td>999$</td>
-              <td>
-                <button onClick={handleMOdal}>ver</button>
-              </td>
-            </tr>
+            </tr> */}
           </table>
         </div>
       </div>

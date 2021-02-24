@@ -31,11 +31,11 @@ const EditProfile = () => {
         <div>
           <div>
             <label htmlFor="Usuario">Nueva contraseña</label>
-            <input type="password" defaultValue="**********" />
+            <input type="password" defaultValue="" />
           </div>
           <div>
-            <label htmlFor="Usuario">Nuevo usuario</label>
-            <input type="password" defaultValue="**********" />
+            <label htmlFor="Usuario">Repetir contraseña</label>
+            <input type="password" defaultValue="" />
           </div>
         </div>
         <button>MODIFICAR</button>
