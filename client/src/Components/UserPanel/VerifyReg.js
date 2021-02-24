@@ -46,7 +46,7 @@ const VerifyReg = ({ email }) => {
             correo no deseado.
           </p>
           <input
-            type="text"
+            type="password"
             placeholder="Ingrese el codigo"
             onChange={(e) => setInput(e.target.value)}
           />

@@ -84,7 +84,7 @@ const Login = () => {
             <label htmlFor="Contraseña">Contraseña</label>
             <small style={{ color: "red" }}>{errors.password?.message}</small>
             <input
-              type="text"
+              type="password"
               placeholder="Ingrese su contraseña"
               name="password"
               ref={register}
