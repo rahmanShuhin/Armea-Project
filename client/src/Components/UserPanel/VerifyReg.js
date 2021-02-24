@@ -3,6 +3,7 @@ import CheckIcon from "@material-ui/icons/Check";
 import { useSelector, useDispatch } from "react-redux";
 import { signIn } from "../actions";
 import { useHistory } from "react-router-dom";
+import jwt_decode from "jwt-decode";
 const VerifyReg = ({ email }) => {
   const [valid, setValid] = useState(false);
   const [input, setInput] = useState("");
@@ -31,6 +32,21 @@ const VerifyReg = ({ email }) => {
           setErr(json.error);
         } else {
           // dispatch(signIn(user.id, user.email, user.name, user.token, true));
+          var decoded = jwt_decode(json.token);
+          console.log(decoded);
+          dispatch(
+            signIn(
+              decoded._id,
+              decoded.email,
+              decoded.name,
+              decoded.country,
+              decoded.region,
+              json.token,
+              decoded.verified
+            )
+          );
+          sessionStorage.setItem("user-token", json.token);
+          history.push("/profile");
           setValid(true);
         }
       });

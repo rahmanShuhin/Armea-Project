@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useSelector, useDispatch } from "react-redux";
 import { yupResolver } from "@hookform/resolvers/yup";
-
 import * as yup from "yup";
 import jwt_decode from "jwt-decode";
 import { signIn } from "../actions";
@@ -65,6 +64,11 @@ const Login = () => {
       });
   };
 
+  useEffect(() => {
+    if (sessionStorage.getItem("user-token")) {
+      history.push("/profile");
+    }
+  }, []);
   return (
     <div className="login">
       <div>
