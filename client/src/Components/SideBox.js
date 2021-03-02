@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TreeView from "@material-ui/lab/TreeView";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -14,7 +14,15 @@ const useStyles = makeStyles({
     flexDirection: "row-reverse",
   },
 });
-const SideBox = ({ setMin, setMax, setSearch, catgTypes, setCatgTypes }) => {
+const SideBox = ({
+  setMin,
+  setMax,
+  setSearch,
+  catgTypes,
+  setCatgTypes,
+  setColor,
+  color,
+}) => {
   const classes = useStyles();
   const [checked, setChecked] = React.useState(false);
   const [checked1, setChecked1] = React.useState(false);
@@ -29,21 +37,25 @@ const SideBox = ({ setMin, setMax, setSearch, catgTypes, setCatgTypes }) => {
 
   const handleColorChange = (e) => {
     if (e.target.name === "color1") {
+      setColor("#c2a976");
       setColor1(true);
       setColor2(false);
       setColor3(false);
       setColor4(false);
     } else if (e.target.name === "color2") {
+      setColor("#a0b4fa");
       setColor1(false);
       setColor2(true);
       setColor3(false);
       setColor4(false);
     } else if (e.target.name === "color3") {
+      setColor("#545454");
       setColor1(false);
       setColor2(false);
       setColor3(true);
       setColor4(false);
     } else {
+      setColor("#ffe5b1");
       setColor1(false);
       setColor2(false);
       setColor3(false);
@@ -79,6 +91,7 @@ const SideBox = ({ setMin, setMax, setSearch, catgTypes, setCatgTypes }) => {
       setCatgTypes(ctg);
     }
   };
+
   return (
     <div className="sideBox">
       <div className="sideBox__top">

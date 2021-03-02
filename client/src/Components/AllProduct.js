@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { fakeData } from "./fakeData";
 import ProductCard from "./ProductCard";
 
-const AllProduct = ({ min, max, search, catgTypes }) => {
+const AllProduct = ({ min, max, search, catgTypes, color }) => {
   const [products, setProducts] = useState([]);
   const [backup, setBackup] = useState([]);
   const [val, setVal] = useState(1);
@@ -160,6 +160,20 @@ const AllProduct = ({ min, max, search, catgTypes }) => {
   //     setProducts(fakeData.slice(0, 6));
   //   }
   // }, [max]);
+
+  useEffect(() => {
+    if (backup.length !== 0) {
+      const pd = fakeData.filter((x) => {
+        if (x.color.find((y) => y === color)) {
+          return x;
+        }
+      });
+      console.log(pd);
+      setBackup(pd);
+      setVal(1);
+      setCount(Math.ceil(backup.length / 6));
+    }
+  }, [color]);
 
   return (
     <div className="allProduct">

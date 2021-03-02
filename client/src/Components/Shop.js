@@ -8,6 +8,7 @@ const Shop = () => {
   const [max, setMax] = useState(null);
   const [search, setSearch] = useState(null);
   const [catg, setCatg] = useState(null);
+  const [color, setColor] = useState("#c2a976");
   const [catgTypes, setCatgTypes] = useState({
     Escritorio: false,
     Sofa: false,
@@ -46,12 +47,15 @@ const Shop = () => {
           setCatg={setCatg}
           catgTypes={catgTypes}
           setCatgTypes={setCatgTypes}
+          setColor={setColor}
+          color={color}
         ></SideBox>
         <AllProduct
           min={min}
           max={max}
           search={search}
           catgTypes={catgTypes}
+          color={color}
         ></AllProduct>
       </div>
     </div>

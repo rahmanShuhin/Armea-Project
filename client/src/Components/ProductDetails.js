@@ -123,7 +123,7 @@ const ProductDetails = () => {
                 </small>
               </div>
               <div className="price_box">
-                <h3>$999</h3>
+                <h3>${products?.price}</h3>
                 {/* <div>
                   <button>+</button>
                   <p>1</p>
