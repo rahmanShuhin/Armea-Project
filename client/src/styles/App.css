@@ -4592,7 +4592,7 @@ a {
 }
 
 .adminSide .button > div {
-  padding: 18px 32px;
+  padding: 18px 0px 18px 32px;
   cursor: pointer;
 }
 
