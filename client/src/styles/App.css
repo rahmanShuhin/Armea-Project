@@ -4593,16 +4593,46 @@ a {
 
 .adminSide .button > div {
   padding: 18px 0px 18px 32px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
   cursor: pointer;
 }
 
 .adminSide .button > div > img {
-  margin-right: 24px;
+  margin-right: 14px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.adminSide .button > div .MuiTreeItem-content {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.adminSide .button > div .MuiTreeItem-content .MuiTypography-root {
+  min-width: 160px;
+}
+
+.adminSide .button > div .MuiTreeItem-group {
+  margin-left: 10px;
+}
+
+.adminSide .button > div .MuiCollapse-wrapperInner > div {
+  margin: 18px 0px;
 }
 
 .adminSide .button .active {
-  background: #9fa2b442;
-  border-left: 3px solid #dde2ff;
+  background: #3752ff1a;
+  border-left: 3px solid #3751ff;
 }
 
 .adminDash {

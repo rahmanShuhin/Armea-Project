@@ -28,15 +28,35 @@
     margin-top: 30px;
     > div {
       padding: 18px 0px 18px 32px;
+
+      display: grid;
+      grid-template-columns: auto 1fr;
       cursor: pointer;
       > img {
-        margin-right: 24px;
+        margin-right: 14px;
+        object-fit: contain;
+      }
+      .MuiTreeItem-content {
+        align-items: flex-start;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        .MuiTypography-root {
+          min-width: 160px;
+        }
+      }
+      .MuiTreeItem-group {
+        margin-left: 10px;
+      }
+      .MuiCollapse-wrapperInner {
+        > div {
+          margin: 18px 0px;
+        }
       }
     }
     .active {
-      background: #9fa2b442;
+      background: #3752ff1a;
 
-      border-left: 3px solid #dde2ff;
+      border-left: 3px solid #3751ff;
     }
   }
 }
