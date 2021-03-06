@@ -4589,6 +4589,7 @@ a {
 
 .adminSide .button {
   margin-top: 30px;
+  color: #dde2ff;
 }
 
 .adminSide .button > div {
@@ -4623,15 +4624,32 @@ a {
 }
 
 .adminSide .button > div .MuiTreeItem-group {
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 .adminSide .button > div .MuiCollapse-wrapperInner > div {
   margin: 18px 0px;
 }
 
+.adminSide .button > div .MuiTreeItem-root.Mui-selected > .MuiTreeItem-content .MuiTreeItem-label {
+  background: none !important;
+}
+
+.adminSide .button > div .MuiTreeItem-root.Mui-selected
+> .MuiTreeItem-content
+.MuiTreeItem-label:hover,
+.adminSide .button > div .MuiTreeItem-root.Mui-selected:focus
+> .MuiTreeItem-content
+.MuiTreeItem-label {
+  background: none !important;
+}
+
+.adminSide .button > div .MuiTreeItem-root:focus > .MuiTreeItem-content .MuiTreeItem-label {
+  background: none !important;
+}
+
 .adminSide .button .active {
-  background: #3752ff1a;
+  background: #3752ff0e;
   border-left: 3px solid #3751ff;
 }
 
@@ -5678,5 +5696,38 @@ a {
   display: grid;
   place-items: center;
   text-align: center;
+}
+
+.salesReport {
+  padding: 36px 30px;
+}
+
+.salesReport__body {
+  padding: 50px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.salesReport__body select,
+.salesReport__body button {
+  padding: 10px 40px;
+  outline: none;
+  cursor: pointer;
+  background: #fafafa;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 1px solid #66788a;
+  color: #66788a;
+  text-transform: uppercase;
+}
+
+.salesReport__body button:nth-of-type(3) {
+  background: #47b881;
+  color: white;
 }
 /*# sourceMappingURL=App.css.map */
