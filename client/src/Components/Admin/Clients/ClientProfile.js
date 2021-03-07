@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import clients_1 from "../../../images/clients_1.png";
 import clients_2 from "../../../images/clients_2.png";
 import clients_3 from "../../../images/clients_3.png";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ClientProfileTable from "./ClientProfileTable";
 const clients = [
   {
     id: 1,
@@ -56,7 +57,13 @@ const clients = [
     total: "$212154",
   },
 ];
-const ClientProfile = ({ setStep }) => {
+const ClientProfile = ({ setStep, step }) => {
+  const [user, setUser] = useState("");
+  useEffect(() => {
+    const arr = clients.find((x) => x.id === step);
+    setUser(arr);
+  }, []);
+  console.log(user);
   return (
     <div className="clientProfile">
       <div>
@@ -64,6 +71,58 @@ const ClientProfile = ({ setStep }) => {
           <ArrowBackIosIcon></ArrowBackIosIcon>
         </button>
         <small>Cliente</small>
+      </div>
+      <div className="clientProfile__top">
+        <img src={user?.img} alt="" />
+        <div>
+          <div>
+            <p>ID</p>
+            <p>{user?.id}</p>
+          </div>
+          <div>
+            <p>Nombre</p>
+            <p>{user?.name}</p>
+          </div>
+          <div>
+            <p>Correo</p>
+            <p>{user?.email}</p>
+          </div>
+          <div>
+            <p>Teléfono</p>
+            <p>{user?.phone}</p>
+          </div>
+          <div>
+            <p>Dirección</p>
+            <p>{user?.address}</p>
+          </div>
+          <div>
+            <p>País</p>
+            <p>{user?.country}</p>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <p>Ciudad</p>
+            <p>{user?.city}</p>
+          </div>
+          <div>
+            <p>Código Postal</p>
+            <p>{user?.postal}</p>
+          </div>
+          <div>
+            <p>Unido</p>
+            <p>{user?.united}</p>
+          </div>
+          <div>
+            <p>Importe Total</p>
+            <p>{user?.total}</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style={{ marginBottom: "20px" }}>Pedidos del cliente</h3>
+        <ClientProfileTable></ClientProfileTable>
       </div>
     </div>
   );

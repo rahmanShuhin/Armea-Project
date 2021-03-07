@@ -5752,4 +5752,66 @@ a {
   margin-left: 28px;
   font-weight: bold;
 }
+
+.clientProfile__top {
+  background: #ffffff;
+  border: 1px solid rgba(63, 63, 68, 0.005);
+  -webkit-box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+          box-shadow: 0px 1px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 38px 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0px;
+}
+
+.clientProfile__top img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 550%;
+}
+
+.clientProfile__top > div {
+  margin: 0px 50px;
+}
+
+.clientProfile__top > div > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.clientProfile__top > div > div > p:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.clientProfile__top > div > div > p:nth-of-type(2) {
+  color: #66788a;
+  margin: 5px 30px;
+}
+
+.clientProfile__top .status_client {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px !important;
+}
+
+.status_client {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
 /*# sourceMappingURL=App.css.map */
