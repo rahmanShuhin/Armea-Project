@@ -3,6 +3,7 @@ import Adjustment from "./Adjustment";
 import AdminDash from "./AdminDash";
 import AdminPost from "./AdminPost";
 import AdminSidebar from "./AdminSidebar";
+import Clients from "./Clients/Clients";
 import Sales_Report from "./Sales_Report";
 import AdminStore from "./Store/AdminStore";
 import Ticket from "./Ticket";
@@ -18,6 +19,7 @@ const Admin = () => {
       {step === 4 && <Adjustment></Adjustment>}
       {step === 5 && <AdminPost></AdminPost>}
       {step === 19 && <Sales_Report></Sales_Report>}
+      {step === 11 && <Clients></Clients>}
     </div>
   );
 };

@@ -20,13 +20,19 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
+import clients_1 from "../../../images/clients_1.png";
+import clients_2 from "../../../images/clients_2.png";
+import clients_3 from "../../../images/clients_3.png";
+
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-function createData(name, user, mail, request, importe, aov) {
-  return { name, user, mail, request, importe, aov };
+function createData(id, img, name, user, mail, request, importe, aov) {
+  return { id, img, name, user, mail, request, importe, aov };
 }
 
 const rows = [
   createData(
+    1,
+    clients_1,
     "Antonio Montana",
     "Tony-Montana12",
     "cliente@armea.com",
@@ -35,6 +41,8 @@ const rows = [
     1
   ),
   createData(
+    2,
+    clients_2,
     "Hector Lavoe",
     "elcantante82",
     "cliente@armea.com",
@@ -42,7 +50,16 @@ const rows = [
     11111,
     265
   ),
-  createData("Simón Díaz", "tio.simon", "cliente@armea.com", 1, 99, 211),
+  createData(
+    3,
+    clients_3,
+    "Simón Díaz",
+    "tio.simon",
+    "cliente@armea.com",
+    1,
+    99,
+    211
+  ),
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -75,7 +92,7 @@ const headCells = [
   {
     id: "name",
     numeric: false,
-    disablePadding: true,
+    disablePadding: false,
     label: "Nombre",
   },
   { id: "user", numeric: false, disablePadding: false, label: "Usuario" },
@@ -102,14 +119,6 @@ function EnhancedTableHead(props) {
   return (
     <TableHead>
       <TableRow>
-        <TableCell padding="checkbox">
-          <Checkbox
-            indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={rowCount > 0 && numSelected === rowCount}
-            onChange={onSelectAllClick}
-            inputProps={{ "aria-label": "select all desserts" }}
-          />
-        </TableCell>
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
@@ -219,7 +228,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function EnhancedTable() {
+export default function ClientTable({ setStep }) {
   const classes = useStyles();
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
@@ -281,6 +290,10 @@ export default function EnhancedTable() {
   const emptyRows =
     rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
+  const handleRowClick = (id) => {
+    setStep(id);
+  };
+
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
@@ -311,25 +324,29 @@ export default function EnhancedTable() {
                   return (
                     <TableRow
                       hover
-                      onClick={(event) => handleClick(event, row.name)}
+                      onClick={(event) => handleRowClick(row.id)}
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
-                      key={row.name}
+                      key={row.id}
                       selected={isItemSelected}
                     >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          checked={isItemSelected}
-                          inputProps={{ "aria-labelledby": labelId }}
-                        />
-                      </TableCell>
                       <TableCell
                         component="th"
                         id={labelId}
                         scope="row"
-                        padding="none"
+                        padding="0px 10px "
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          fontWeight: "bold",
+                        }}
                       >
+                        <img
+                          style={{ marginRight: "10px" }}
+                          src={row.img}
+                          alt=""
+                        />
                         {row.name}
                       </TableCell>
                       <TableCell align="left">{row.user}</TableCell>

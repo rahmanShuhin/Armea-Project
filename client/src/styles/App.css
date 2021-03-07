@@ -5730,4 +5730,26 @@ a {
   background: #47b881;
   color: white;
 }
+
+.clients {
+  padding: 36px 30px;
+}
+
+.clientProfile {
+  padding: 50px 40px;
+}
+
+.clientProfile button {
+  background: #3751ff;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.clientProfile small {
+  font-size: 24px;
+  margin-left: 28px;
+  font-weight: bold;
+}
 /*# sourceMappingURL=App.css.map */

@@ -816,3 +816,23 @@
     }
   }
 }
+
+.clients {
+  padding: 36px 30px;
+}
+
+.clientProfile {
+  padding: 50px 40px;
+  button {
+    background: #3751ff;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  small {
+    font-size: 24px;
+    margin-left: 28px;
+    font-weight: bold;
+  }
+}
